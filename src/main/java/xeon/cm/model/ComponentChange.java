@@ -8,7 +8,6 @@ import java.util.Date;
  * Date: 3/3/13
  * Time: 12:05 PM
  */
-
 public class ComponentChange {
     private int id;
     private Component component;
