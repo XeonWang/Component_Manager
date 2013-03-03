@@ -4,12 +4,15 @@
         <property name="hibernate.current_session_context_class">thread</property>
 
         <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
-        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/test</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/Component_manager</property>
         <property name="hibernate.connection.username">root</property>
         <property name="hibernate.connection.password">ggggfnuxkjy</property>
         <property name="hibernate.connection.pool_size">1</property>
 		<property name="show_sql">true</property>
+        <property name="sql_format">true</property>
 
-		<mapping class="xeon.hibernate.model.User"/>
+		<mapping class="xeon.cm.model.Person"/>
+        <mapping class="xeon.cm.model.Company"/>
+        <mapping class="xeon.cm.model.ComponentType"/>
 	</session-factory>
 </hibernate-configuration>
