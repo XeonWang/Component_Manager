@@ -34,7 +34,7 @@ public class ComponentType {
         this.name = name;
     }
 
-    @ElementCollection
+    @ElementCollection(fetch = FetchType.LAZY)
     @CollectionTable(name = "Type_field", joinColumns = @JoinColumn(name = "type_id"))
     public List<TypeField> getFields() {
         return fields;

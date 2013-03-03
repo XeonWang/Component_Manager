@@ -24,3 +24,11 @@ create table Type_field (
     type_id int(10),
     foreign key(type_id) references Component_type(id)
 );
+
+drop table if exists Component;
+create table Component (
+    id varchar(20) primary key,
+    amount int(10) not null,
+    type_id int(10) not null,
+    foreign key (type_id) references Component_type(id)
+);
