@@ -8,7 +8,7 @@
     <file path="/hibernate.cfg.xml" changelist="b1fd73c3-1c44-46a1-8c61-46a457d814bd" time="1362299751454" ignored="false" />
     <file path="/Test.java" changelist="b1fd73c3-1c44-46a1-8c61-46a457d814bd" time="1361975533350" ignored="false" />
     <file path="/User.java" changelist="b1fd73c3-1c44-46a1-8c61-46a457d814bd" time="1361975440177" ignored="false" />
-    <file path="/fragment.java" changelist="b1fd73c3-1c44-46a1-8c61-46a457d814bd" time="1361888893596" ignored="false" />
+    <file path="/fragment.java" changelist="b1fd73c3-1c44-46a1-8c61-46a457d814bd" time="1362905532114" ignored="false" />
     <file path="/Dummy.txt" changelist="b1fd73c3-1c44-46a1-8c61-46a457d814bd" time="1361888903258" ignored="false" />
     <file path="/Address.java" changelist="b1fd73c3-1c44-46a1-8c61-46a457d814bd" time="1361975466655" ignored="false" />
     <file path="/ComponentType.java" changelist="b1fd73c3-1c44-46a1-8c61-46a457d814bd" time="1362322985707" ignored="false" />
@@ -26,6 +26,9 @@
     <file path="/ComponentTypeDAO.java" changelist="b1fd73c3-1c44-46a1-8c61-46a457d814bd" time="1362299916267" ignored="false" />
     <file path="/ComponentTypeTest.java" changelist="b1fd73c3-1c44-46a1-8c61-46a457d814bd" time="1362301427587" ignored="false" />
     <file path="/ComponentChange.java" changelist="b1fd73c3-1c44-46a1-8c61-46a457d814bd" time="1362323292785" ignored="false" />
+    <file path="/MainFrame.java" changelist="b1fd73c3-1c44-46a1-8c61-46a457d814bd" time="1362905778902" ignored="false" />
+    <file path="/CMMenuBar.java" changelist="b1fd73c3-1c44-46a1-8c61-46a457d814bd" time="1362905726560" ignored="false" />
+    <file path="/ComponentStateButton.java" changelist="b1fd73c3-1c44-46a1-8c61-46a457d814bd" time="1362905445415" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,104 +88,77 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="init.sql" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/documents/init.sql">
+      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="55" selection-start="841" selection-end="841" vertical-scroll-proportion="0.0">
+            <state line="7" column="44" selection-start="385" selection-end="385" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ComponentType.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/xeon/cm/model/ComponentType.java">
+      <file leaf-file-name="MainFrame.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/xeon/cm/gui/MainFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="46" selection-start="656" selection-end="656" vertical-scroll-proportion="0.0">
+            <state line="24" column="43" selection-start="548" selection-end="548" vertical-scroll-proportion="0.7408377">
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#324#335#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Company.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/xeon/cm/model/Company.java">
+      <file leaf-file-name="CMMenuBar.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/xeon/cm/gui/CMMenuBar.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="39" selection-start="235" selection-end="235" vertical-scroll-proportion="0.0">
+            <state line="18" column="41" selection-start="410" selection-end="410" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ComponentStateMenu.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/xeon/cm/gui/menu/ComponentStateMenu.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="40" selection-start="229" selection-end="229" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Component.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/xeon/cm/model/Component.java">
+      <file leaf-file-name="ComponentInMenu.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/xeon/cm/gui/menu/ComponentInMenu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="41" selection-start="312" selection-end="312" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ComponentOut.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/xeon/cm/model/ComponentOut.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="64" selection-start="346" selection-end="346" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ComponentIn.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/xeon/cm/model/ComponentIn.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="30" selection-start="568" selection-end="568" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ComponentModify.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/xeon/cm/model/ComponentModify.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="41" selection-start="299" selection-end="299" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ComponentChange.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/xeon/cm/model/ComponentChange.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="12" selection-start="144" selection-end="144" vertical-scroll-proportion="0.41322315">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TypeField.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/xeon/cm/model/TypeField.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="24" selection-start="250" selection-end="250" vertical-scroll-proportion="0.0">
+            <state line="12" column="34" selection-start="217" selection-end="217" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Person.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/xeon/cm/model/Person.java">
+      <file leaf-file-name="ComponentOutMenu.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/xeon/cm/gui/menu/ComponentOutMenu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="45" selection-start="496" selection-end="496" vertical-scroll-proportion="0.0">
+            <state line="12" column="35" selection-start="220" selection-end="220" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ComponentModifyMenu.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/xeon/cm/gui/menu/ComponentModifyMenu.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="38" selection-start="229" selection-end="229" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SystemManageMenu.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/xeon/cm/gui/menu/SystemManageMenu.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="35" selection-start="220" selection-end="220" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -198,15 +174,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/xeon/xeon/cm/dao/PersonDAO.java" />
-        <option value="$PROJECT_DIR$/src/test/java/xeon/cm/dao/PersonDAOTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cm/dao/PersonDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/xeon/cm/dao/PersonDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/xeon/cm/model/Company.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/xeon/cm/dao/ComponentTypeDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/xeon/cm/model/TypeField.java" />
-        <option value="$PROJECT_DIR$/src/test/java/xeon/cm/dao/ComponentTypeTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/xeon/cm/model/Component.java" />
         <option value="$PROJECT_DIR$/documents/init.sql" />
         <option value="$PROJECT_DIR$/src/main/java/xeon/cm/model/ComponentType.java" />
@@ -214,6 +181,15 @@
         <option value="$PROJECT_DIR$/src/main/java/xeon/cm/model/ComponentModify.java" />
         <option value="$PROJECT_DIR$/src/main/java/xeon/cm/model/ComponentOut.java" />
         <option value="$PROJECT_DIR$/src/main/java/xeon/cm/model/ComponentChange.java" />
+        <option value="$PROJECT_DIR$/src/main/java/xeon/cm/gui/button/ComponentStateButton.java" />
+        <option value="$PROJECT_DIR$/src/main/java/xeon/cm/gui/button/ComponentStateMenu.java" />
+        <option value="$PROJECT_DIR$/src/main/java/xeon/cm/gui/menu/ComponentStateMenu.java" />
+        <option value="$PROJECT_DIR$/src/main/java/xeon/cm/gui/menu/ComponentInMenu.java" />
+        <option value="$PROJECT_DIR$/src/main/java/xeon/cm/gui/menu/ComponentOutMenu.java" />
+        <option value="$PROJECT_DIR$/src/main/java/xeon/cm/gui/menu/ComponentModifyMenu.java" />
+        <option value="$PROJECT_DIR$/src/main/java/xeon/cm/gui/menu/SystemManageMenu.java" />
+        <option value="$PROJECT_DIR$/src/main/java/xeon/cm/gui/CMMenuBar.java" />
+        <option value="$PROJECT_DIR$/src/main/java/xeon/cm/gui/MainFrame.java" />
       </list>
     </option>
   </component>
@@ -235,10 +211,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="66" />
-    <option name="y" value="52" />
-    <option name="width" value="1299" />
-    <option name="height" value="715" />
+    <option name="x" value="64" />
+    <option name="y" value="-4" />
+    <option name="width" value="1303" />
+    <option name="height" value="773" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -283,6 +259,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -314,18 +291,6 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -397,7 +362,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
+              <option name="myItemId" value="gui" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -427,7 +392,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="dao" />
+              <option name="myItemId" value="gui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="menu" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -448,7 +417,6 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -469,6 +437,9 @@
     <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="xeon.cm.gui.menu" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources" />
     </key>
@@ -476,7 +447,7 @@
       <recent name="xeon.hibernate.model" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ComponentTypeTest.testSave">
+  <component name="RunManager" selected="Application.MainFrame">
     <configuration default="false" name="Test.testUserInsert" type="JUnit" factoryName="JUnit" temporary="true">
       <module name="Hibernate_study" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -539,6 +510,22 @@
       </option>
       <envs />
       <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="MainFrame" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="xeon.cm.gui.MainFrame" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Component_Manager" />
+      <envs />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
@@ -681,17 +668,19 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <list size="4">
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Maven.compile" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.Test.testUserInsert" />
       <item index="2" class="java.lang.String" itemvalue="JUnit.PersonDAOTest.testSave" />
       <item index="3" class="java.lang.String" itemvalue="JUnit.ComponentTypeTest.testSave" />
+      <item index="4" class="java.lang.String" itemvalue="Application.MainFrame" />
     </list>
     <recent_temporary>
-      <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.ComponentTypeTest.testSave" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.PersonDAOTest.testSave" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.Test.testUserInsert" />
+      <list size="4">
+        <item index="0" class="java.lang.String" itemvalue="Application.MainFrame" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.ComponentTypeTest.testSave" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.PersonDAOTest.testSave" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.Test.testUserInsert" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -727,27 +716,27 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="66" y="52" width="1299" height="715" extended-state="0" />
-    <editor active="true" />
+    <frame x="64" y="-4" width="1303" height="773" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31208053" sideWeight="0.37689242" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3136" sideWeight="0.38087648" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32885906" sideWeight="0.48443735" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32988048" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24740623" sideWeight="0.68791944" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3136" sideWeight="0.61752987" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24621513" sideWeight="0.6864" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3136" sideWeight="0.61354584" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32885906" sideWeight="0.48443735" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -812,78 +801,44 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/xeon/cm/util/HibernateUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="104" selection-start="289" selection-end="289" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/xeon/cm/dao/PersonDAOTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="46" selection-start="332" selection-end="332" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/xeon/cm/dao/PersonDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="43" selection-start="419" selection-end="419" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="54" selection-start="944" selection-end="944" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/xeon/cm/dao/ComponentTypeDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="8" selection-start="420" selection-end="420" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/xeon/cm/dao/ComponentTypeTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="44" selection-start="565" selection-end="565" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/documents/init.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="55" selection-start="841" selection-end="841" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/xeon/cm/model/Company.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="39" selection-start="235" selection-end="235" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/xeon/cm/model/Component.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="41" selection-start="312" selection-end="312" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/xeon/cm/model/TypeField.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="24" selection-start="250" selection-end="250" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/xeon/cm/model/ComponentType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="46" selection-start="656" selection-end="656" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/xeon/cm/model/ComponentIn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="30" selection-start="568" selection-end="568" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/xeon/cm/model/ComponentModify.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="41" selection-start="299" selection-end="299" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/xeon/cm/model/ComponentOut.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="64" selection-start="346" selection-end="346" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -895,46 +850,69 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/xeon/cm/model/ComponentType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="46" selection-start="656" selection-end="656" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#324#335#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/xeon/cm/model/ComponentIn.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="30" selection-start="568" selection-end="568" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/xeon/cm/model/ComponentModify.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="41" selection-start="299" selection-end="299" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/xeon/cm/model/ComponentOut.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="64" selection-start="346" selection-end="346" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/xeon/cm/model/ComponentChange.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="12" selection-start="144" selection-end="144" vertical-scroll-proportion="0.41322315">
+        <state line="29" column="55" selection-start="518" selection-end="518" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="44" selection-start="385" selection-end="385" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/xeon/cm/gui/menu/ComponentStateMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="40" selection-start="229" selection-end="229" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/xeon/cm/gui/menu/ComponentInMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="34" selection-start="217" selection-end="217" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/xeon/cm/gui/menu/ComponentOutMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="35" selection-start="220" selection-end="220" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/xeon/cm/gui/menu/ComponentModifyMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="38" selection-start="229" selection-end="229" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/xeon/cm/gui/menu/SystemManageMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="35" selection-start="220" selection-end="220" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/xeon/cm/gui/CMMenuBar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="41" selection-start="410" selection-end="410" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/xeon/cm/gui/MainFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="43" selection-start="548" selection-end="548" vertical-scroll-proportion="0.7408377">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
