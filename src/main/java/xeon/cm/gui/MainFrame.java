@@ -12,19 +12,26 @@ public class MainFrame extends JFrame {
 
     private int width = 800;
     private int height = 600;
+    private JPanel content = new JPanel(new BorderLayout());
 
     private void init() {
-        this.setSize(new Dimension(this.width, this.height));
-        this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        setSize(new Dimension(this.width, this.height));
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        getContent().setOpaque(true);
+    }
+
+    public JPanel getContent() {
+        return content;
     }
 
     public static void main(String[] args) {
         MainFrame mainFrame = new MainFrame();
         mainFrame.init();
 
-        JMenuBar menuBar = new CMMenuBar();
+        JMenuBar menuBar = new CMMenuBar(mainFrame.getContent());
         mainFrame.setJMenuBar(menuBar);
-
+        mainFrame.setContentPane(mainFrame.getContent());
+//        mainFrame.pack();
         mainFrame.setVisible(true);
     }
 }
