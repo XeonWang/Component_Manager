@@ -1,7 +1,11 @@
 package xeon.cm.gui.search;
 
-import javax.swing.*;
-import java.awt.*;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+import java.awt.Color;
+import java.awt.FlowLayout;
 
 /**
  * User: xeon

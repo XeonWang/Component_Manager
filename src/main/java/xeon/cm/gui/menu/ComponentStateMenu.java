@@ -1,10 +1,12 @@
 package xeon.cm.gui.menu;
 
+
 import xeon.cm.gui.grid.StateTableModel;
 import xeon.cm.gui.search.StateSearchBar;
 
-import javax.swing.*;
-import java.awt.*;
+import javax.swing.JPanel;
+import javax.swing.JTable;
+import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
 
 /**
