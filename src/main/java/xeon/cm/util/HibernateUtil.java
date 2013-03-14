@@ -9,5 +9,9 @@ import org.hibernate.cfg.Configuration;
  * Time: 3:53 PM
  */
 public class HibernateUtil {
-    public static SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
+    public static SessionFactory sessionFactory;
+    
+    public static void init() {
+    	sessionFactory = new Configuration().configure().buildSessionFactory();
+    }
 }

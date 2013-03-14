@@ -1,10 +1,13 @@
 package xeon.cm.gui.grid;
 
+import java.util.List;
+import java.util.Map;
+
+import javax.swing.JTable;
+import javax.swing.table.AbstractTableModel;
+
 import xeon.cm.dao.ComponentDAO;
 import xeon.cm.model.Component;
-
-import javax.swing.table.AbstractTableModel;
-import java.util.List;
 
 /**
  * User: xeon
@@ -15,13 +18,18 @@ public class StateTableModel extends AbstractTableModel {
 
     private ComponentDAO componentDAO;
     private List<Component> components;
+    private JTable table;
 
     public StateTableModel() {
         componentDAO = new ComponentDAO();
         components = componentDAO.load();
     }
+    
+    public void setTable(JTable table) {
+		this.table = table;
+	}
 
-    @Override
+	@Override
 	public String getColumnName(int column) {
     	switch (column) {
 	        case 0:
@@ -56,5 +64,10 @@ public class StateTableModel extends AbstractTableModel {
                 return component.getAmount();
         }
         return "";
+    }
+    
+    public void search(Map<String, String> critieras) {
+    	components = componentDAO.search(critieras);
+    	fireTableDataChanged();
     }
 }

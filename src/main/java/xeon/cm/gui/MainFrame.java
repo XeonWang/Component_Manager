@@ -1,6 +1,9 @@
 package xeon.cm.gui;
 
 import javax.swing.*;
+
+import xeon.cm.util.HibernateUtil;
+
 import java.awt.*;
 
 /**
@@ -10,12 +13,12 @@ import java.awt.*;
  */
 public class MainFrame extends JFrame {
 
-    private int width = 800;
-    private int height = 600;
+    public static final int width = 800;
+    public static final int height = 600;
     private JPanel content = new JPanel(new BorderLayout());
 
     private void init() {
-        setSize(new Dimension(this.width, this.height));
+        setSize(new Dimension(width, height));
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         getContent().setOpaque(true);
     }
@@ -25,6 +28,7 @@ public class MainFrame extends JFrame {
     }
 
     public static void main(String[] args) {
+    	HibernateUtil.init();
         MainFrame mainFrame = new MainFrame();
         mainFrame.init();
 

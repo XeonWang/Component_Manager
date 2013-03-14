@@ -12,7 +12,7 @@ import javax.swing.*;
 public class CMMenuBar extends JMenuBar {
 
     public CMMenuBar(JPanel content) {
-        this.add(new ComponentStateMenu(content));
+        this.add(ComponentStateMenu.getInstance(content));
         this.add(new ComponentInMenu(content));
         this.add(new ComponentOutMenu(content));
         this.add(new ComponentModifyMenu(content));

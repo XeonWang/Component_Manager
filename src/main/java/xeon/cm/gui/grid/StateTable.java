@@ -11,11 +11,18 @@ import javax.swing.table.TableModel;
  */
 public class StateTable extends JTable {
 	
+	private static StateTable instance;
+	
 	private StateTable(TableModel model){
 		super(model);
 	}
 	
     public static StateTable getInstance() {
-    	return new StateTable(new StateTableModel());
+    	if (instance == null) {
+    		StateTableModel model = new StateTableModel();
+    		instance = new StateTable(model);
+    		model.setTable(instance);
+    	}
+    	return instance;
     }
 }

@@ -18,11 +18,23 @@ import xeon.cm.gui.search.StateSearchBar;
  * Time: 4:49 PM
  */
 public class ComponentStateMenu extends CMMenu {
+	
+	private StateSearchBar stateSearchBar = StateSearchBar.getInstance();
+	private StateTable stateTable = StateTable.getInstance();
+	
+	private static ComponentStateMenu instance;
 
-    public ComponentStateMenu(JPanel content) {
+    private ComponentStateMenu(JPanel content) {
         super(content);
         this.setText("Component State");
         this.build();
+    }
+    
+    public static ComponentStateMenu getInstance(JPanel content) {
+    	if(instance == null) {
+    		instance = new ComponentStateMenu(content);
+    	}
+    	return instance;
     }
 
     @Override
@@ -31,8 +43,17 @@ public class ComponentStateMenu extends CMMenu {
     }
 
     private void buildPanel() {
-        getContent().add(new StateSearchBar(), BorderLayout.NORTH);
-        getContent().add(new JScrollPane(StateTable.getInstance()), BorderLayout.CENTER);
+        getContent().add(stateSearchBar, BorderLayout.NORTH);
+        getContent().add(stateTable, BorderLayout.CENTER);
         getContent().validate();
     }
+
+	public StateSearchBar getStateSearchBar() {
+		return stateSearchBar;
+	}
+
+	public StateTable getStateTable() {
+		return stateTable;
+	}
+    
 }
