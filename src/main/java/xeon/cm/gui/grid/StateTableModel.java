@@ -22,6 +22,19 @@ public class StateTableModel extends AbstractTableModel {
     }
 
     @Override
+	public String getColumnName(int column) {
+    	switch (column) {
+	        case 0:
+	            return "ID";
+	        case 1:
+	            return "Type";
+	        case 2:
+	            return "Amount";
+	    }
+	    return "";
+	}
+
+	@Override
     public int getRowCount() {
         return components.size();
     }

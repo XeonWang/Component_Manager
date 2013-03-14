@@ -1,13 +1,16 @@
 package xeon.cm.gui.menu;
 
 
-import xeon.cm.gui.grid.StateTableModel;
-import xeon.cm.gui.search.StateSearchBar;
-
-import javax.swing.JPanel;
-import javax.swing.JTable;
 import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
+
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+
+import xeon.cm.gui.grid.StateTable;
+import xeon.cm.gui.grid.StateTableModel;
+import xeon.cm.gui.search.StateSearchBar;
 
 /**
  * User: xeon
@@ -29,8 +32,7 @@ public class ComponentStateMenu extends CMMenu {
 
     private void buildPanel() {
         getContent().add(new StateSearchBar(), BorderLayout.NORTH);
-        JTable table = new JTable(new StateTableModel());
-        getContent().add(table, BorderLayout.CENTER);
+        getContent().add(new JScrollPane(StateTable.getInstance()), BorderLayout.CENTER);
         getContent().validate();
     }
 }
