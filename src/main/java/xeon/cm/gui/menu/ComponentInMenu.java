@@ -1,7 +1,10 @@
 package xeon.cm.gui.menu;
 
-import javax.swing.*;
-import java.awt.event.ActionEvent;
+import xeon.cm.gui.grid.InTable;
+import xeon.cm.gui.search.InSearchBar;
+
+import javax.swing.JPanel;
+import java.awt.BorderLayout;
 
 /**
  * User: xeon
@@ -10,13 +13,26 @@ import java.awt.event.ActionEvent;
  */
 public class ComponentInMenu extends CMMenu {
 
-    public ComponentInMenu(JPanel content) {
+    private InSearchBar inSearchBar = InSearchBar.getInstance();
+    private InTable inTable = InTable.getInstance();
+
+    private static ComponentInMenu instance;
+
+    private ComponentInMenu(JPanel content) {
         super(content);
-        this.setText("Component In");
+        setText("Component In");
+        build();
+    }
+
+    public static ComponentInMenu getInstance(JPanel content) {
+        if (instance == null) instance = new ComponentInMenu(content);
+        return instance;
     }
 
     @Override
-    public void actionPerformed(ActionEvent e) {
-        //To change body of implemented methods use File | Settings | File Templates.
+    protected void buildPanel() {
+        getContent().add(inSearchBar, BorderLayout.NORTH);
+        getContent().add(inTable, BorderLayout.CENTER);
+        getContent().validate();
     }
 }

@@ -44,6 +44,7 @@ public class ComponentChange {
         this.date = date;
     }
 
+    @Column(name = "change_count")
     public int getCount() {
         return count;
     }

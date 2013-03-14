@@ -1,13 +1,12 @@
 package xeon.cm.gui.search;
 
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.util.Map;
+import xeon.cm.gui.grid.StateTableModel;
 
 import javax.swing.JButton;
 import javax.swing.JTable;
-
-import xeon.cm.gui.grid.StateTableModel;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.Map;
 
 public class SearchButton extends JButton implements ActionListener {
 	
@@ -23,9 +22,7 @@ public class SearchButton extends JButton implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-//		StateSearchBar stateSearchBar = StateSearchBar.getInstance();
 		Map<String, String> critieras = searchBar.getSearchCritieras();
-//		StateTable stateTable = StateTable.getInstance();
 		((StateTableModel) table.getModel()).search(critieras);
 	}
 

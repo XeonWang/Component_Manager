@@ -1,6 +1,7 @@
 package xeon.cm.gui.menu;
 
 import javax.swing.*;
+import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 /**
@@ -23,4 +24,11 @@ public abstract class CMMenu extends JButton implements ActionListener {
     public JPanel getContent() {
         return content;
     }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        buildPanel();
+    }
+
+    abstract protected void buildPanel();
 }

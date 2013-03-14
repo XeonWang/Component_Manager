@@ -19,4 +19,9 @@ public class ComponentModifyMenu extends CMMenu {
     public void actionPerformed(ActionEvent e) {
         //To change body of implemented methods use File | Settings | File Templates.
     }
+
+    @Override
+    protected void buildPanel() {
+        //To change body of implemented methods use File | Settings | File Templates.
+    }
 }
