@@ -1,8 +1,12 @@
 package xeon.cm.gui;
 
-import xeon.cm.gui.menu.*;
+import javax.swing.JMenuBar;
+import javax.swing.JPanel;
 
-import javax.swing.*;
+import xeon.cm.gui.factory.Factory;
+import xeon.cm.gui.factory.InFactory;
+import xeon.cm.gui.factory.StateFactory;
+import xeon.cm.gui.menu.SystemManageMenu;
 
 /**
  * User: xeon
@@ -11,11 +15,16 @@ import javax.swing.*;
  */
 public class CMMenuBar extends JMenuBar {
 
+	private static final long serialVersionUID = 1364258261329504302L;
+	
+	private Factory stateFactory = StateFactory.getInstance();
+	private Factory inFactory = InFactory.getInstance();
+
     public CMMenuBar(JPanel content) {
-        this.add(ComponentStateMenu.getInstance(content));
-        this.add(ComponentInMenu.getInstance(content));
-        this.add(new ComponentOutMenu(content));
-        this.add(new ComponentModifyMenu(content));
+        this.add(stateFactory.createMenu(content));
+        this.add(inFactory.createMenu(content));
+//        this.add(new ComponentOutMenu(content));
+//        this.add(new ComponentModifyMenu(content));
         this.add(new SystemManageMenu());
     }
 

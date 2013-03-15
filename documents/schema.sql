@@ -41,6 +41,7 @@ create table Component_in (
     change_count int(10) not null,
     price int(10),
     company_id int(10),
+    actionId varchar(10),
     mark nvarchar(40),
     foreign key (component_id) references Component(id),
     foreign key (company_id) references Company(id)

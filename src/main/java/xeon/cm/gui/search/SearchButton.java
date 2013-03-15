@@ -10,6 +10,8 @@ import java.util.Map;
 
 public class SearchButton extends JButton implements ActionListener {
 	
+	private static final long serialVersionUID = -7003415055684685446L;
+	
 	private SearchBar searchBar;
 	private JTable table;
 	

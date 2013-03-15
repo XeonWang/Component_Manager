@@ -13,7 +13,9 @@ import java.awt.*;
  */
 public class MainFrame extends JFrame {
 
-    public static final int width = 800;
+	private static final long serialVersionUID = -1647333493938517746L;
+	
+	public static final int width = 800;
     public static final int height = 600;
     private JPanel content = new JPanel(new BorderLayout());
 

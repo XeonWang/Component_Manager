@@ -1,13 +1,5 @@
 package xeon.cm.gui.search;
 
-import xeon.cm.gui.MainFrame;
-import xeon.cm.gui.grid.InTable;
-import xeon.cm.util.StringUtil;
-
-import javax.swing.JFormattedTextField;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JTextField;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.FlowLayout;
@@ -15,14 +7,25 @@ import java.text.SimpleDateFormat;
 import java.util.HashMap;
 import java.util.Map;
 
+import javax.swing.JFormattedTextField;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+import xeon.cm.gui.MainFrame;
+import xeon.cm.gui.factory.Factory;
+import xeon.cm.util.StringUtil;
+
 /**
  * User: xeon
  * Date: 3/14/13
  * Time: 10:27 PM
  */
-public class InSearchBar extends JPanel implements SearchBar {
-
-    private int width = MainFrame.width;
+public class InSearchBar extends SearchBar {
+	
+	private static final long serialVersionUID = -8462639444144619063L;
+	
+	private int width = MainFrame.width;
     private int height = 40;
 
     private static InSearchBar instance;
@@ -36,13 +39,14 @@ public class InSearchBar extends JPanel implements SearchBar {
     private JTextField priceEnd = new JTextField(5);
     private JTextField actionId = new JTextField(10);
 
-    private InSearchBar(){
+    private InSearchBar(Factory factory){
+    	super(factory);
         init();
         addChildren();
     }
 
-    public static InSearchBar getInstance() {
-        if (instance == null) instance = new InSearchBar();
+    public static InSearchBar getInstance(Factory factory) {
+        if (instance == null) instance = new InSearchBar(factory);
         return instance;
     }
 
@@ -81,7 +85,7 @@ public class InSearchBar extends JPanel implements SearchBar {
         critieras.add(actionId);
 
         add(critieras, BorderLayout.LINE_START);
-        add(new SearchButton(this, InTable.getInstance()), BorderLayout.LINE_END);
+        add(new SearchButton(this, factory.createTable()), BorderLayout.LINE_END);
     }
 
     @Override

@@ -1,7 +1,8 @@
 package xeon.cm.gui.grid;
 
-import javax.swing.JTable;
 import javax.swing.table.TableModel;
+
+import xeon.cm.gui.factory.Factory;
 
 
 /**
@@ -9,19 +10,19 @@ import javax.swing.table.TableModel;
  * Date: 3/12/13
  * Time: 9:40 PM
  */
-public class StateTable extends JTable {
+public class StateTable extends CMTable {
+
+	private static final long serialVersionUID = -3751487942557336545L;
 	
 	private static StateTable instance;
 	
-	private StateTable(TableModel model){
-		super(model);
+	private StateTable(Factory factory, TableModel model){
+		super(factory, model);
 	}
 	
-    public static StateTable getInstance() {
+    public static StateTable getInstance(Factory factory, TableModel model) {
     	if (instance == null) {
-    		StateTableModel model = new StateTableModel();
-    		instance = new StateTable(model);
-    		model.setTable(instance);
+    		instance = new StateTable(factory, model);
     	}
     	return instance;
     }

@@ -16,8 +16,8 @@ public class ComponentInDAO {
     public List<ComponentIn> load() {
         Session session = HibernateUtil.sessionFactory.getCurrentSession();
         session.beginTransaction();
-//        List<ComponentIn> ins = session.createCriteria(ComponentIn.class).list();
-        List<ComponentIn> ins = session.createQuery("FROM ComponentIn").list();
+        @SuppressWarnings("unchecked")
+		List<ComponentIn> ins = session.createCriteria(ComponentIn.class).list();
         session.getTransaction().commit();
         return ins;
     }

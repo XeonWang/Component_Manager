@@ -3,28 +3,23 @@ package xeon.cm.gui.grid;
 import xeon.cm.dao.ComponentInDAO;
 import xeon.cm.model.ComponentIn;
 
-import javax.swing.JTable;
-import javax.swing.table.AbstractTableModel;
 import java.util.List;
+import java.util.Map;
 
 /**
  * User: xeon
  * Date: 3/14/13
  * Time: 10:51 PM
  */
-public class InTableModel extends AbstractTableModel {
+public class InTableModel extends CMTableModel {
 
-    private ComponentInDAO componentInDAO;
+	private static final long serialVersionUID = 3026396090463171489L;
+	
+	private ComponentInDAO componentInDAO;
     private List<ComponentIn> ins;
-    private JTable table;
 
     public InTableModel() {
         componentInDAO = new ComponentInDAO();
-        ins = componentInDAO.load();
-    }
-
-    public void setTable(JTable table) {
-        this.table = table;
     }
 
     @Override
@@ -71,7 +66,7 @@ public class InTableModel extends AbstractTableModel {
             case 3:
                 return in.getPrice();
             case 4:
-                return in.getCompany();
+                return in.getCompany().getName();
             case 5:
                 return in.getActionId();
             case 6:
@@ -79,4 +74,16 @@ public class InTableModel extends AbstractTableModel {
         }
         return "";
     }
+
+	@Override
+	public void load() {
+		ins = componentInDAO.load();
+		fireTableDataChanged();
+	}
+
+	@Override
+	public void search(Map<String, String> critieras) {
+		// TODO Auto-generated method stub
+		
+	}
 }

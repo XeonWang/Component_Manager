@@ -6,13 +6,12 @@ import java.awt.FlowLayout;
 import java.util.HashMap;
 import java.util.Map;
 
-import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 import xeon.cm.gui.MainFrame;
-import xeon.cm.gui.grid.StateTable;
+import xeon.cm.gui.factory.Factory;
 import xeon.cm.util.StringUtil;
 
 /**
@@ -20,7 +19,9 @@ import xeon.cm.util.StringUtil;
  * Date: 3/12/13
  * Time: 9:15 PM
  */
-public class StateSearchBar extends JPanel implements SearchBar {
+public class StateSearchBar extends SearchBar {
+	
+	private static final long serialVersionUID = 4388181040127724396L;
 	
 	private int width = MainFrame.width;
 	private int height = 40;
@@ -32,13 +33,14 @@ public class StateSearchBar extends JPanel implements SearchBar {
 	
 	private static StateSearchBar instance;
 	
-    private StateSearchBar() {
+    private StateSearchBar(Factory factory) {
+    	super(factory);
     	init();
     	addChildren();
     }
     
-    public static StateSearchBar getInstance() {
-    	if(instance == null) instance = new StateSearchBar();
+    public static StateSearchBar getInstance(Factory factory) {
+    	if(instance == null) instance = new StateSearchBar(factory);
     	return instance;
     }
     
@@ -66,7 +68,7 @@ public class StateSearchBar extends JPanel implements SearchBar {
     	critieras.add(amountEndField);
     	
     	add(critieras, BorderLayout.LINE_START);
-        add(new SearchButton(this, StateTable.getInstance()), BorderLayout.LINE_END);
+        add(new SearchButton(this, factory.createTable()), BorderLayout.LINE_END);
     }
     
     @Override

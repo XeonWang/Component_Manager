@@ -11,7 +11,8 @@ import org.hibernate.cfg.Configuration;
 public class HibernateUtil {
     public static SessionFactory sessionFactory;
     
-    public static void init() {
+    @SuppressWarnings("deprecation")
+	public static void init() {
     	sessionFactory = new Configuration().configure().buildSessionFactory();
     }
 }

@@ -3,9 +3,6 @@ package xeon.cm.gui.grid;
 import java.util.List;
 import java.util.Map;
 
-import javax.swing.JTable;
-import javax.swing.table.AbstractTableModel;
-
 import xeon.cm.dao.ComponentDAO;
 import xeon.cm.model.Component;
 
@@ -14,20 +11,16 @@ import xeon.cm.model.Component;
  * Date: 3/12/13
  * Time: 10:17 PM
  */
-public class StateTableModel extends AbstractTableModel {
+public class StateTableModel extends CMTableModel {
 
-    private ComponentDAO componentDAO;
+	private static final long serialVersionUID = 7308535920494682060L;
+	
+	private ComponentDAO componentDAO;
     private List<Component> components;
-    private JTable table;
 
     public StateTableModel() {
         componentDAO = new ComponentDAO();
-        components = componentDAO.load();
     }
-    
-    public void setTable(JTable table) {
-		this.table = table;
-	}
 
 	@Override
 	public String getColumnName(int column) {
@@ -66,8 +59,15 @@ public class StateTableModel extends AbstractTableModel {
         return "";
     }
     
+    @Override
     public void search(Map<String, String> critieras) {
     	components = componentDAO.search(critieras);
+    	fireTableDataChanged();
+    }
+    
+    @Override
+    public void load() {
+    	components = componentDAO.load();
     	fireTableDataChanged();
     }
 }

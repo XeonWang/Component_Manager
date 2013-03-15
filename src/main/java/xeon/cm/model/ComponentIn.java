@@ -1,7 +1,7 @@
 package xeon.cm.model;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -26,7 +26,7 @@ public class ComponentIn extends ComponentChange {
     }
 
     @OneToOne
-    @Column(name = "company_id")
+    @JoinColumn(name = "company_id")
     public Company getCompany() {
         return company;
     }

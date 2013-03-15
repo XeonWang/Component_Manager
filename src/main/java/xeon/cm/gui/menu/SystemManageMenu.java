@@ -9,7 +9,9 @@ import javax.swing.*;
  */
 public class SystemManageMenu extends JMenu {
 
-    public SystemManageMenu() {
+	private static final long serialVersionUID = -3656200783336311895L;
+
+	public SystemManageMenu() {
         this.setText("System Manage");
     }
 }

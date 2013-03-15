@@ -1,8 +1,17 @@
 package xeon.cm.gui.menu;
 
-import javax.swing.*;
+import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+
+import xeon.cm.gui.factory.Factory;
+import xeon.cm.gui.grid.CMTableModel;
+import xeon.cm.gui.search.SearchBar;
 
 /**
  * User: xeon
@@ -11,9 +20,16 @@ import java.awt.event.ActionListener;
  */
 public abstract class CMMenu extends JButton implements ActionListener {
 
-    protected JPanel content;
+	private static final long serialVersionUID = 6561954541290933397L;
 
-    protected CMMenu(JPanel content) {
+	protected JPanel content;
+    
+    protected SearchBar searchBar;
+    protected JTable table;
+    protected Factory factory;
+
+    protected CMMenu(Factory factory, JPanel content) {
+    	this.factory = factory;
         this.content = content;
     }
 
@@ -29,6 +45,13 @@ public abstract class CMMenu extends JButton implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         buildPanel();
     }
-
-    abstract protected void buildPanel();
+    
+    protected void buildPanel() {
+        searchBar = factory.createSearchBar();
+    	table = factory.createTable();
+    	((CMTableModel) table.getModel()).load();
+        getContent().add(searchBar, BorderLayout.NORTH);
+        getContent().add(new JScrollPane(table), BorderLayout.CENTER);
+        getContent().validate();
+    }
 }

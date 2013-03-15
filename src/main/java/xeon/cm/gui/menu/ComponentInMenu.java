@@ -1,10 +1,9 @@
 package xeon.cm.gui.menu;
 
-import xeon.cm.gui.grid.InTable;
-import xeon.cm.gui.search.InSearchBar;
 
 import javax.swing.JPanel;
-import java.awt.BorderLayout;
+
+import xeon.cm.gui.factory.Factory;
 
 /**
  * User: xeon
@@ -13,26 +12,19 @@ import java.awt.BorderLayout;
  */
 public class ComponentInMenu extends CMMenu {
 
-    private InSearchBar inSearchBar = InSearchBar.getInstance();
-    private InTable inTable = InTable.getInstance();
+	private static final long serialVersionUID = -7835164409305743978L;
+	
+	private static ComponentInMenu instance;
 
-    private static ComponentInMenu instance;
-
-    private ComponentInMenu(JPanel content) {
-        super(content);
+    private ComponentInMenu(Factory factory, JPanel content) {
+        super(factory, content);
         setText("Component In");
         build();
     }
 
-    public static ComponentInMenu getInstance(JPanel content) {
-        if (instance == null) instance = new ComponentInMenu(content);
+    public static ComponentInMenu getInstance(Factory factory, JPanel content) {
+        if (instance == null) instance = new ComponentInMenu(factory, content);
         return instance;
     }
 
-    @Override
-    protected void buildPanel() {
-        getContent().add(inSearchBar, BorderLayout.NORTH);
-        getContent().add(inTable, BorderLayout.CENTER);
-        getContent().validate();
-    }
 }

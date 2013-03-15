@@ -1,7 +1,10 @@
 package xeon.cm.gui.menu;
 
-import javax.swing.*;
 import java.awt.event.ActionEvent;
+
+import javax.swing.JPanel;
+
+import xeon.cm.gui.factory.Factory;
 
 /**
  * User: xeon
@@ -10,8 +13,10 @@ import java.awt.event.ActionEvent;
  */
 public class ComponentOutMenu extends CMMenu {
 
-    public ComponentOutMenu(JPanel content) {
-        super(content);
+	private static final long serialVersionUID = -650727042250332717L;
+
+	public ComponentOutMenu(Factory factory, JPanel content) {
+        super(factory, content);
         this.setText("Component Out");
     }
 
