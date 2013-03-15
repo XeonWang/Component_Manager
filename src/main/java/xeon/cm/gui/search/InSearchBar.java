@@ -7,6 +7,7 @@ import java.text.SimpleDateFormat;
 import java.util.HashMap;
 import java.util.Map;
 
+import javax.swing.BoxLayout;
 import javax.swing.JFormattedTextField;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -57,34 +58,45 @@ public class InSearchBar extends SearchBar {
     }
 
     private void addChildren() {
-        FlowLayout critieraLayout = new FlowLayout();
-        critieraLayout.setHgap(15);
-        JPanel critieras = new JPanel(critieraLayout);
-        critieras.setBackground(Color.GRAY);
+        FlowLayout critieraLayout = new FlowLayout(FlowLayout.LEADING);
+        critieraLayout.setHgap(5);
+        JPanel critieras1 = new JPanel(critieraLayout);
+        critieras1.setSize(700, critieras1.getHeight());
+        critieras1.setBackground(Color.GRAY);
 
-        critieras.add(new JLabel("Comp: "));
-        critieras.add(componentId);
+        critieras1.add(new JLabel("Comp: "));
+        critieras1.add(componentId);
 
-        critieras.add(new JLabel("Date: "));
-        critieras.add(date);
+        critieras1.add(new JLabel("Date: "));
+        date.setColumns(10);
+        critieras1.add(date);
 
-        critieras.add(new JLabel("Count: "));
-        critieras.add(countBegin);
-        critieras.add(new JLabel("-"));
-        critieras.add(countEnd);
+        critieras1.add(new JLabel("Count: "));
+        critieras1.add(countBegin);
+        critieras1.add(new JLabel("-"));
+        critieras1.add(countEnd);
+        
+        JPanel critieras2 = new JPanel(critieraLayout);
+        critieras2.setSize(700, critieras1.getHeight());
+        critieras2.setBackground(Color.GRAY);
 
-        critieras.add(new JLabel("Price: "));
-        critieras.add(priceBegin);
-        critieras.add(new JLabel("-"));
-        critieras.add(priceEnd);
+        critieras2.add(new JLabel("Price: "));
+        critieras2.add(priceBegin);
+        critieras2.add(new JLabel("-"));
+        critieras2.add(priceEnd);
 
-        critieras.add(new JLabel("Company: "));
-        critieras.add(company);
+        critieras2.add(new JLabel("Company: "));
+        critieras2.add(company);
 
-        critieras.add(new JLabel("Action: "));
-        critieras.add(actionId);
+        critieras2.add(new JLabel("Action: "));
+        critieras2.add(actionId);
+        
+        JPanel critierasContainer = new JPanel();
+        critierasContainer.setLayout(new BoxLayout(critierasContainer, BoxLayout.Y_AXIS));
+        critierasContainer.add(critieras1);
+        critierasContainer.add(critieras2);
 
-        add(critieras, BorderLayout.LINE_START);
+        add(critierasContainer, BorderLayout.LINE_START);
         add(new SearchButton(this, factory.createTable()), BorderLayout.LINE_END);
     }
 
