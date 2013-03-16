@@ -1,21 +1,22 @@
 package xeon.cm.gui.search;
 
-import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.FlowLayout;
-import java.text.SimpleDateFormat;
-import java.util.HashMap;
-import java.util.Map;
+import xeon.cm.gui.MainFrame;
+import xeon.cm.gui.factory.Factory;
+import xeon.cm.util.StringUtil;
 
 import javax.swing.BoxLayout;
 import javax.swing.JFormattedTextField;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
-
-import xeon.cm.gui.MainFrame;
-import xeon.cm.gui.factory.Factory;
-import xeon.cm.util.StringUtil;
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.FlowLayout;
+import java.awt.GridLayout;
+import java.awt.LayoutManager;
+import java.text.SimpleDateFormat;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * User: xeon
@@ -97,12 +98,20 @@ public class InSearchBar extends SearchBar {
         critierasContainer.add(critieras2);
 
         add(critierasContainer, BorderLayout.LINE_START);
-        add(new SearchButton(this, factory.createTable()), BorderLayout.LINE_END);
+
+        JPanel buttons = new JPanel();
+        buttons.setBackground(Color.GRAY);
+        LayoutManager buttonsLayout = new GridLayout(2, 1, 0, 5);
+        buttons.setLayout(buttonsLayout);
+        buttons.add(new SearchButton(this, factory.createTable()));
+        buttons.add(new RegisterButton(factory));
+
+        add(buttons, BorderLayout.LINE_END);
     }
 
     @Override
     public Map<String, String> getSearchCritieras() {
-        Map<String, String> critieras = new HashMap<String, String>();
+        Map<String, String> critieras = new HashMap<>();
         if(!StringUtil.isEmpty(componentId.getText())) {
             critieras.put("componentId", componentId.getText());
         }

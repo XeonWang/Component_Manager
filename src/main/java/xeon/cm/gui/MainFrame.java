@@ -1,10 +1,13 @@
 package xeon.cm.gui;
 
-import javax.swing.*;
-
 import xeon.cm.util.HibernateUtil;
 
-import java.awt.*;
+import javax.swing.JFrame;
+import javax.swing.JMenuBar;
+import javax.swing.JPanel;
+import javax.swing.WindowConstants;
+import java.awt.BorderLayout;
+import java.awt.Dimension;
 
 /**
  * User: xeon
@@ -21,6 +24,7 @@ public class MainFrame extends JFrame {
 
     private void init() {
         setSize(new Dimension(width, height));
+        setLocationRelativeTo(null);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         getContent().setOpaque(true);
     }
@@ -37,7 +41,6 @@ public class MainFrame extends JFrame {
         JMenuBar menuBar = new CMMenuBar(mainFrame.getContent());
         mainFrame.setJMenuBar(menuBar);
         mainFrame.setContentPane(mainFrame.getContent());
-//        mainFrame.pack();
         mainFrame.setVisible(true);
     }
 }
