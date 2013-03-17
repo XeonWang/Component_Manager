@@ -10,14 +10,14 @@ import javax.swing.JTable;
 
 public interface Factory {
 	
-	public CMMenu createMenu(JPanel content);
+	CMMenu createMenu(JPanel content);
 	
-	public SearchBar createSearchBar();
+	SearchBar createSearchBar();
 	
-	public JTable createTable();
+	JTable createTable();
 	
-	public CMTableModel createTableModel();
+	CMTableModel createTableModel();
 
-    public JFrame createRegisterFrame();
+    JFrame createRegisterFrame();
 	
 }

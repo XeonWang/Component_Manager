@@ -1,16 +1,15 @@
 package xeon.cm.dao;
 
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-
 import org.hibernate.Criteria;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.criterion.Restrictions;
-
 import xeon.cm.model.Component;
 import xeon.cm.util.HibernateUtil;
+
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 /**
  * User: xeon
@@ -34,6 +33,14 @@ public class ComponentDAO {
         int count = (Integer) query.uniqueResult();
         session.getTransaction().commit();
         return count;
+    }
+
+    public Component getById(String id) {
+        Session session = HibernateUtil.sessionFactory.getCurrentSession();
+        session.beginTransaction();
+        Component component = (Component) session.get(Component.class, id);
+        session.getTransaction().commit();
+        return component;
     }
     
 	@SuppressWarnings("unchecked")
@@ -61,5 +68,12 @@ public class ComponentDAO {
     	List<Component> components = hibernateCriteria.list();
     	session.getTransaction().commit();
     	return components;
+    }
+
+    public void save(Component component) {
+        Session session = HibernateUtil.sessionFactory.getCurrentSession();
+        session.beginTransaction();
+        session.save(component);
+        session.getTransaction().commit();
     }
 }

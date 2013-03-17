@@ -21,4 +21,11 @@ public class ComponentInDAO {
         session.getTransaction().commit();
         return ins;
     }
+
+    public void save(ComponentIn componentIn) {
+        Session session = HibernateUtil.sessionFactory.getCurrentSession();
+        session.beginTransaction();
+        session.save(componentIn);
+        session.getTransaction().commit();
+    }
 }

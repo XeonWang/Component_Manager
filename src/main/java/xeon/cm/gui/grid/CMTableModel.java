@@ -1,8 +1,7 @@
 package xeon.cm.gui.grid;
 
-import java.util.Map;
-
 import javax.swing.table.AbstractTableModel;
+import java.util.Map;
 
 public abstract class CMTableModel extends AbstractTableModel {
 

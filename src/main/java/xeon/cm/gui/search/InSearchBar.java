@@ -25,7 +25,7 @@ import java.util.Map;
  */
 public class InSearchBar extends SearchBar {
 	
-	private static final long serialVersionUID = -8462639444144619063L;
+	private static final long serialVersionUID = -8462639444144619069L;
 	
 	private int width = MainFrame.width;
     private int height = 40;
