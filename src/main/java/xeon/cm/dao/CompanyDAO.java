@@ -14,7 +14,7 @@ public class CompanyDAO {
     public Company getById(int id) {
         Session session = HibernateUtil.sessionFactory.getCurrentSession();
         session.beginTransaction();
-        Company company = (Company) session.get(Company.class, Integer.valueOf(id));
+        Company company = (Company) session.get(Company.class, id);
         session.getTransaction().commit();
         return company;
     }
