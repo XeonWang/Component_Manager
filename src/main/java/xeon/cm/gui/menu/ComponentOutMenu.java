@@ -1,7 +1,5 @@
 package xeon.cm.gui.menu;
 
-import java.awt.event.ActionEvent;
-
 import javax.swing.JPanel;
 
 import xeon.cm.gui.factory.Factory;
@@ -15,18 +13,16 @@ public class ComponentOutMenu extends CMMenu {
 
 	private static final long serialVersionUID = -650727042250332717L;
 
-	public ComponentOutMenu(Factory factory, JPanel content) {
+	private static ComponentOutMenu instance;
+	
+	private ComponentOutMenu(Factory factory, JPanel content) {
         super(factory, content);
         this.setText("Component Out");
+        addActionListener(this);
     }
-
-    @Override
-    public void actionPerformed(ActionEvent e) {
-        //To change body of implemented methods use File | Settings | File Templates.
-    }
-
-    @Override
-    protected void buildPanel() {
-        //To change body of implemented methods use File | Settings | File Templates.
-    }
+	
+	public static ComponentOutMenu getInstance(Factory factory, JPanel content) {
+		if(instance == null) instance = new ComponentOutMenu(factory, content);
+		return instance;
+	}
 }

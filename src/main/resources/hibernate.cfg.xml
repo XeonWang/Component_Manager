@@ -17,5 +17,6 @@
         <mapping class="xeon.cm.model.ComponentType"/>
         <mapping class="xeon.cm.model.Component"/>
         <mapping class="xeon.cm.model.ComponentIn"/>
+        <mapping class="xeon.cm.model.ComponentOut"/>
 	</session-factory>
 </hibernate-configuration>

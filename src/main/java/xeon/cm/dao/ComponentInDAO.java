@@ -9,7 +9,6 @@ import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.criterion.Restrictions;
 
-import xeon.cm.model.Company;
 import xeon.cm.model.Component;
 import xeon.cm.model.ComponentIn;
 import xeon.cm.util.HibernateUtil;

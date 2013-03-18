@@ -1,6 +1,7 @@
 package xeon.cm.model;
 
 import javax.persistence.*;
+
 import java.util.Map;
 
 /**
@@ -13,7 +14,7 @@ import java.util.Map;
 public class ComponentOut extends ComponentChange {
     private String eId;
     private Person person;
-    private Map<String, Integer> actionIds;
+    private Map<String, Action> actions;
 
     public String getEId() {
         return eId;
@@ -22,7 +23,9 @@ public class ComponentOut extends ComponentChange {
     public void setEId(String eId) {
         this.eId = eId;
     }
-
+    
+    @OneToOne
+    @JoinColumn(name = "person_id")
     public Person getPerson() {
         return person;
     }
@@ -32,15 +35,15 @@ public class ComponentOut extends ComponentChange {
     }
 
     @ElementCollection
-    @JoinTable(name = "out_action", joinColumns = @JoinColumn(name = "out_id"))
-    @MapKey(name = "id")
+    @JoinTable(name = "Out_action", joinColumns = @JoinColumn(name = "out_id"))
+    @MapKey(name = "actionId")
     @Column(name = "count")
-    public Map<String, Integer> getActionIds() {
-        return actionIds;
+    public Map<String, Action> getActionIds() {
+        return actions;
     }
 
-    public void setActionIds(Map<String, Integer> actionIds) {
-        this.actionIds = actionIds;
+    public void setActionIds(Map<String, Action> actions) {
+        this.actions = actions;
     }
 
 }
