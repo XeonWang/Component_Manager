@@ -83,7 +83,7 @@ public class InTableModel extends CMTableModel {
 
 	@Override
 	public void search(Map<String, String> critieras) {
-		// TODO Auto-generated method stub
-		
+    	ins = componentInDAO.search(critieras);
+    	fireTableDataChanged();
 	}
 }

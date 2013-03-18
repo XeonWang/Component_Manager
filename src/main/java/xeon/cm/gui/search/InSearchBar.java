@@ -33,7 +33,7 @@ public class InSearchBar extends SearchBar {
     private static InSearchBar instance;
 
     private JTextField componentId = new JTextField(10);
-    private JFormattedTextField date = new JFormattedTextField(new SimpleDateFormat("MM/dd/yyyy"));
+    private JFormattedTextField date = new JFormattedTextField(new SimpleDateFormat(StringUtil.DATA_FORMAT));
     private JTextField countBegin = new JTextField(5);
     private JTextField countEnd = new JTextField(5);
     private JTextField company = new JTextField(10);
@@ -70,6 +70,7 @@ public class InSearchBar extends SearchBar {
 
         critieras1.add(new JLabel("Date: "));
         date.setColumns(10);
+        date.setFocusLostBehavior(JFormattedTextField.COMMIT);
         critieras1.add(date);
 
         critieras1.add(new JLabel("Count: "));

@@ -22,6 +22,7 @@ import xeon.cm.gui.grid.CMTableModel;
 import xeon.cm.model.Company;
 import xeon.cm.model.Component;
 import xeon.cm.model.ComponentIn;
+import xeon.cm.util.StringUtil;
 
 /**
  * User: xeon
@@ -87,7 +88,7 @@ public class InRegisterFrame extends JFrame implements Register {
         constraints.gridx = 0;
         constraints.gridy = 1;
         add(new JLabel("Date: "), constraints);
-        date = new JFormattedTextField(new SimpleDateFormat("MM/dd/yyyy"));
+        date = new JFormattedTextField(new SimpleDateFormat(StringUtil.DATA_FORMAT));
         date.setColumns(10);
         constraints.gridx = 1;
         constraints.gridy = 1;
