@@ -1,7 +1,10 @@
 package xeon.cm.dao;
 
+import java.util.List;
+
 import org.hibernate.Session;
 import org.hibernate.criterion.Restrictions;
+
 import xeon.cm.model.Company;
 import xeon.cm.util.HibernateUtil;
 
@@ -11,6 +14,15 @@ import xeon.cm.util.HibernateUtil;
  * Time: 10:39 PM
  */
 public class CompanyDAO {
+	public List<Company> load() {
+        Session session = HibernateUtil.sessionFactory.getCurrentSession();
+        session.beginTransaction();
+        @SuppressWarnings("unchecked")
+		List <Company> companies = (List<Company>) session.createCriteria(Company.class).list();
+        session.getTransaction().commit();
+        return companies;
+	}
+	
     public Company getById(int id) {
         Session session = HibernateUtil.sessionFactory.getCurrentSession();
         session.beginTransaction();

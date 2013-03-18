@@ -1,6 +1,9 @@
 package xeon.cm.gui.factory;
 
-import com.sun.xml.internal.ws.addressing.model.ActionNotSupportedException;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+import xeon.cm.gui.grid.CMTable;
 import xeon.cm.gui.grid.CMTableModel;
 import xeon.cm.gui.grid.StateTable;
 import xeon.cm.gui.grid.StateTableModel;
@@ -9,9 +12,7 @@ import xeon.cm.gui.menu.ComponentStateMenu;
 import xeon.cm.gui.search.SearchBar;
 import xeon.cm.gui.search.StateSearchBar;
 
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.JTable;
+import com.sun.xml.internal.ws.addressing.model.ActionNotSupportedException;
 
 public class StateFactory implements Factory {
 	
@@ -34,7 +35,7 @@ public class StateFactory implements Factory {
 	}
 
 	@Override
-	public JTable createTable() {
+	public CMTable createTable() {
 		return StateTable.getInstance(this, createTableModel());
 	}
 

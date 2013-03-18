@@ -1,12 +1,12 @@
 package xeon.cm.gui.factory;
 
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+import xeon.cm.gui.grid.CMTable;
 import xeon.cm.gui.grid.CMTableModel;
 import xeon.cm.gui.menu.CMMenu;
 import xeon.cm.gui.search.SearchBar;
-
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.JTable;
 
 public interface Factory {
 	
@@ -14,7 +14,7 @@ public interface Factory {
 	
 	SearchBar createSearchBar();
 	
-	JTable createTable();
+	CMTable createTable();
 	
 	CMTableModel createTableModel();
 

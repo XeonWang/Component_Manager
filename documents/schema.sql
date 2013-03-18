@@ -7,7 +7,8 @@ create table Person (
 drop table if exists Company;
 create table Company (
     id int(10) primary key auto_increment,
-    name varchar(100) not null
+    name varchar(100) not null,
+    unique key (name)
 );
 
 drop table if exists Component_type;

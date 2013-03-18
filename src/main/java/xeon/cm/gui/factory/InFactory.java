@@ -1,5 +1,9 @@
 package xeon.cm.gui.factory;
 
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+import xeon.cm.gui.grid.CMTable;
 import xeon.cm.gui.grid.CMTableModel;
 import xeon.cm.gui.grid.InTable;
 import xeon.cm.gui.grid.InTableModel;
@@ -8,10 +12,6 @@ import xeon.cm.gui.menu.CMMenu;
 import xeon.cm.gui.menu.ComponentInMenu;
 import xeon.cm.gui.search.InSearchBar;
 import xeon.cm.gui.search.SearchBar;
-
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.JTable;
 
 public class InFactory implements Factory {
 	
@@ -34,7 +34,7 @@ public class InFactory implements Factory {
 	}
 
 	@Override
-	public JTable createTable() {
+	public CMTable createTable() {
 		return InTable.getInstance(this, createTableModel());
 	}
 
@@ -45,6 +45,6 @@ public class InFactory implements Factory {
 
     @Override
     public JFrame createRegisterFrame() {
-        return InRegisterFrame.getInstance();
+        return InRegisterFrame.getInstance(this);
     }
 }

@@ -1,21 +1,27 @@
 package xeon.cm.gui.grid.register;
 
-import xeon.cm.dao.CompanyDAO;
-import xeon.cm.dao.ComponentDAO;
-import xeon.cm.dao.ComponentInDAO;
-import xeon.cm.model.ComponentIn;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
+import java.awt.Insets;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 
 import javax.swing.JComboBox;
 import javax.swing.JFormattedTextField;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
-import java.awt.GridBagConstraints;
-import java.awt.GridBagLayout;
-import java.awt.Insets;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.Vector;
+
+import xeon.cm.dao.CompanyDAO;
+import xeon.cm.dao.ComponentDAO;
+import xeon.cm.dao.ComponentInDAO;
+import xeon.cm.gui.factory.Factory;
+import xeon.cm.gui.grid.CMTableModel;
+import xeon.cm.model.Company;
+import xeon.cm.model.Component;
+import xeon.cm.model.ComponentIn;
 
 /**
  * User: xeon
@@ -27,6 +33,8 @@ public class InRegisterFrame extends JFrame implements Register {
 	private static final long serialVersionUID = -5354471350340778635L;
 	
 	private static InRegisterFrame instance;
+	private Factory factory;
+	
     private JComboBox<String> comps;
     private JFormattedTextField date;
     private JTextField count;
@@ -39,19 +47,21 @@ public class InRegisterFrame extends JFrame implements Register {
     private ComponentDAO componentDAO;
     private CompanyDAO companyDAO;
 
-    private InRegisterFrame() {
+    private InRegisterFrame(Factory factory) {
         super("In Register");
-        setSize(400, 300);
-        build();
-        setLocationRelativeTo(null);
+        this.factory = factory;
 
         componentDAO = new ComponentDAO();
         componentInDAO = new ComponentInDAO();
         companyDAO = new CompanyDAO();
+        
+        setSize(400, 300);
+        build();
+        setLocationRelativeTo(null);
     }
 
-    public static InRegisterFrame getInstance() {
-        if (instance == null) instance = new InRegisterFrame();
+    public static InRegisterFrame getInstance(Factory factory) {
+        if (instance == null) instance = new InRegisterFrame(factory);
         return instance;
     }
 
@@ -64,8 +74,12 @@ public class InRegisterFrame extends JFrame implements Register {
         constraints.gridx = 0;
         constraints.gridy = 0;
         add(new JLabel("Comp: "), constraints);
-        String[] compOptions = {"T2234C3", "Component2", "Component3"};
-        comps = new JComboBox<>(compOptions);
+        List<Component> components = componentDAO.load();
+        List<String> compOptions = new ArrayList<>();
+        for(Component component : components) {
+        	compOptions.add(component.getId());
+        }
+        comps = new JComboBox<>(compOptions.toArray(new String[0]));
         constraints.gridx = 1;
         constraints.gridy = 0;
         add(comps, constraints);
@@ -91,12 +105,12 @@ public class InRegisterFrame extends JFrame implements Register {
         constraints.gridx = 0;
         constraints.gridy = 3;
         add(new JLabel("Company: "), constraints);
-//        String[] companyOptions = {"Company1", "Company2", "Company3"};
-        Vector<String> companyOptions = new Vector<>();
-        companyOptions.add(0, "Company1");
-        companyOptions.add(1, "Company2");
-        companyOptions.add(2, "Company3");
-        companies = new JComboBox<>(companyOptions);
+        List<Company> companyEtities = companyDAO.load(); 
+        List<String> companyOptions = new ArrayList<>();
+        for(Company company : companyEtities) {
+        	companyOptions.add(company.getName());
+        }
+        companies = new JComboBox<>(companyOptions.toArray(new String[0]));
         constraints.gridx = 1;
         constraints.gridy = 3;
         add(companies, constraints);
@@ -147,7 +161,8 @@ public class InRegisterFrame extends JFrame implements Register {
         in.setMark(remark.getText());
 
         componentInDAO.save(in);
-
+        
+        ((CMTableModel) factory.createTable().getModel()).load();
         this.setVisible(false);
         this.validate();
     }
