@@ -14,7 +14,9 @@ import java.awt.event.ActionListener;
  */
 public class RegisterButton extends JButton implements ActionListener {
 
-    private Factory factory;
+	private static final long serialVersionUID = 6712050487534171173L;
+	
+	private Factory factory;
 
     public RegisterButton(Factory factory) {
         super("Register");

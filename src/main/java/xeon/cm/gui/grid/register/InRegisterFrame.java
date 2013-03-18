@@ -24,7 +24,9 @@ import java.util.Vector;
  */
 public class InRegisterFrame extends JFrame implements Register {
 
-    private static InRegisterFrame instance;
+	private static final long serialVersionUID = -5354471350340778635L;
+	
+	private static InRegisterFrame instance;
     private JComboBox<String> comps;
     private JFormattedTextField date;
     private JTextField count;
@@ -135,7 +137,9 @@ public class InRegisterFrame extends JFrame implements Register {
         ComponentIn in = new ComponentIn();
 
         in.setComponent(componentDAO.getById(comps.getSelectedItem().toString()));
-        in.setDate(new Date(date.getValue().toString()));
+        @SuppressWarnings("deprecation")
+		Date dateValue = new Date(date.getValue().toString());
+		in.setDate(dateValue);
         in.setCount(Integer.parseInt(count.getText()));
         in.setCompany(companyDAO.getByName((String) companies.getSelectedItem()));
         in.setPrice(Integer.parseInt(price.getText()));
