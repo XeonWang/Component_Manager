@@ -1,10 +1,10 @@
 package xeon.cm.gui.grid;
 
-import java.util.List;
-import java.util.Map;
-
 import xeon.cm.dao.ComponentOutDAO;
 import xeon.cm.model.ComponentOut;
+
+import java.util.List;
+import java.util.Map;
 
 /**
  * User: xeon
@@ -64,7 +64,7 @@ public class OutTableModel extends CMTableModel {
             case 3:
                 return out.getEId();
             case 4:
-                return out.getPerson();
+                return out.getPerson().getName();
             case 5:
                 return out.getMark();
         }
