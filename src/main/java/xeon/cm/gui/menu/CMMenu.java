@@ -33,10 +33,6 @@ public abstract class CMMenu extends JButton implements ActionListener {
         this.content = content;
     }
 
-    protected void build() {
-        this.addActionListener(this);
-    }
-
     public JPanel getContent() {
         return content;
     }
@@ -47,11 +43,13 @@ public abstract class CMMenu extends JButton implements ActionListener {
     }
     
     protected void buildPanel() {
+    	getContent().removeAll();
         searchBar = factory.createSearchBar();
     	table = factory.createTable();
     	((CMTableModel) table.getModel()).load();
         getContent().add(searchBar, BorderLayout.NORTH);
         getContent().add(new JScrollPane(table), BorderLayout.CENTER);
-        getContent().validate();
+        getContent().revalidate();
+        getContent().repaint();
     }
 }

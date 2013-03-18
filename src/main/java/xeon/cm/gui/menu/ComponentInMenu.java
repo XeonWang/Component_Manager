@@ -19,7 +19,7 @@ public class ComponentInMenu extends CMMenu {
     private ComponentInMenu(Factory factory, JPanel content) {
         super(factory, content);
         setText("Component In");
-        build();
+        addActionListener(this);
     }
 
     public static ComponentInMenu getInstance(Factory factory, JPanel content) {

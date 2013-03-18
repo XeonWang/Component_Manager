@@ -22,7 +22,7 @@ public class ComponentStateMenu extends CMMenu {
     private ComponentStateMenu(Factory factory, JPanel content) {
         super(factory, content);
         setText("Component State");
-        build();
+        addActionListener(this);
     }
     
     public static ComponentStateMenu getInstance(Factory factory, JPanel content) {

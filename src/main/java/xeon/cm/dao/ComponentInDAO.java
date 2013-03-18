@@ -1,10 +1,12 @@
 package xeon.cm.dao;
 
+import java.util.List;
+
 import org.hibernate.Session;
+
+import xeon.cm.model.Component;
 import xeon.cm.model.ComponentIn;
 import xeon.cm.util.HibernateUtil;
-
-import java.util.List;
 
 /**
  * User: xeon
@@ -25,6 +27,9 @@ public class ComponentInDAO {
     public void save(ComponentIn componentIn) {
         Session session = HibernateUtil.sessionFactory.getCurrentSession();
         session.beginTransaction();
+        Component component = componentIn.getComponent();
+        component.setAmount(component.getAmount() + componentIn.getCount());
+        session.saveOrUpdate(component);
         session.save(componentIn);
         session.getTransaction().commit();
     }
