@@ -62,7 +62,7 @@ public class OutTableModel extends CMTableModel {
             case 2:
                 return out.getCount();
             case 3:
-                return out.getEId();
+                return out.getEid();
             case 4:
                 return out.getPerson().getName();
             case 5:

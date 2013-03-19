@@ -18,16 +18,17 @@ import java.util.Map;
 @Entity
 @Table(name = "Component_out")
 public class ComponentOut extends ComponentChange {
-    private String eId;
+    private String eid;
     private Person person;
     private Map<String, Integer> actions;
 
-    public String getEId() {
-        return eId;
+    @Column(name="eid")
+    public String getEid() {
+        return eid;
     }
 
-    public void setEId(String eId) {
-        this.eId = eId;
+    public void setEid(String eid) {
+        this.eid = eid;
     }
     
     @OneToOne
