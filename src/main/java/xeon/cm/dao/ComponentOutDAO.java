@@ -21,6 +21,13 @@ public class ComponentOutDAO {
         session.getTransaction().commit();
         return outs;
 	}
+
+    public void save(ComponentOut componentOut) {
+        Session session = HibernateUtil.sessionFactory.getCurrentSession();
+        session.beginTransaction();
+        session.save(componentOut);
+        session.getTransaction().commit();
+    }
 	
 	public List<ComponentOut> search(Map<String, String> criterias) {
         List<ComponentOut> results;
