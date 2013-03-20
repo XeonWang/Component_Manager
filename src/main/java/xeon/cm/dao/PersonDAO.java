@@ -21,7 +21,8 @@ public class PersonDAO {
         session.getTransaction().commit();
     }
 
-    public List<Person> load() {
+    @SuppressWarnings("unchecked")
+	public List<Person> load() {
         List<Person> results;
         Session session = HibernateUtil.sessionFactory.getCurrentSession();
         session.beginTransaction();

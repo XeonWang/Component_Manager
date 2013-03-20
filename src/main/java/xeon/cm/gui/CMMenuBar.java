@@ -7,7 +7,6 @@ import xeon.cm.gui.factory.Factory;
 import xeon.cm.gui.factory.InFactory;
 import xeon.cm.gui.factory.OutFactory;
 import xeon.cm.gui.factory.StateFactory;
-import xeon.cm.gui.menu.ComponentOutMenu;
 import xeon.cm.gui.menu.SystemManageMenu;
 
 /**

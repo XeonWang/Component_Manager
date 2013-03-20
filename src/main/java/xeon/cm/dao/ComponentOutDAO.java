@@ -29,6 +29,7 @@ public class ComponentOutDAO {
         session.getTransaction().commit();
     }
 	
+	@SuppressWarnings({ "deprecation", "unchecked" })
 	public List<ComponentOut> search(Map<String, String> criterias) {
         List<ComponentOut> results;
         Set<String> keys = criterias.keySet();

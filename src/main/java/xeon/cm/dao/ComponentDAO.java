@@ -1,15 +1,19 @@
 package xeon.cm.dao;
 
+import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
 import org.hibernate.Criteria;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.criterion.Restrictions;
+
+import xeon.cm.model.ActionModel;
 import xeon.cm.model.Component;
 import xeon.cm.util.HibernateUtil;
-
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
 
 /**
  * User: xeon
@@ -75,5 +79,28 @@ public class ComponentDAO {
         session.beginTransaction();
         session.save(component);
         session.getTransaction().commit();
+    }
+    
+    public List<ActionModel> getActionInfo(String componentId) {
+    	List<ActionModel> results = new ArrayList<ActionModel>();
+    	Session session = HibernateUtil.sessionFactory.getCurrentSession();
+    	session.beginTransaction();
+    	Query query = session.createSQLQuery("select cin.actionId, " +
+    			"sum(cin.change_count) - " +
+    			"case when sum(action.count) is null " +
+    			"then 0 else sum(action.count) end amount " +
+    			"from Component_in as cin left join Component_out as cout " +
+    			"on cout.component_id = cin.component_id " +
+    			"left join Out_action as action " +
+    			"on cout.id = action.out_id where cin.component_id = ? " +
+    			"group by action.actionId, cin.actionId;");
+    	query.setString(0, componentId);
+    	@SuppressWarnings("unchecked")
+		List<Object[]> sqlresults = query.list();
+    	for(Object[] obj : sqlresults) {
+    		results.add(new ActionModel((String)obj[0], ((BigDecimal)obj[1]).intValue()));
+    	}
+    	session.getTransaction().commit();
+    	return results;
     }
 }
