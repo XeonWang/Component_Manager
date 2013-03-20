@@ -70,11 +70,11 @@ public class OutRegisterFrame extends JFrame implements Register {
         personDAO = new PersonDAO();
         
         buildComponentField();
+        buildActionsField();
         buildDateField();
         buildCountField();
         buildPersonField();
         buildEidField();
-        buildActionsField();
         buildRemarkField();
         
         setSize(400, 300);
@@ -177,6 +177,7 @@ public class OutRegisterFrame extends JFrame implements Register {
 						@Override
 						public void actionPerformed(ActionEvent e) {
 							selectedAction.setCount(Integer.parseInt(countField.getText()));
+							OutRegisterFrame.this.buildCountField();
 							dialog.setVisible(false);
 						}
 						
@@ -204,8 +205,20 @@ public class OutRegisterFrame extends JFrame implements Register {
 	}
 
 	private void buildCountField() {
-		count = new JTextField();
+		if(count == null) {
+			count = new JTextField();
+		}
         count.setColumns(10);
+        count.setEditable(false);
+        int sum = 0;
+        ListModel<ActionModel> actions = actionIds.getModel();
+        if(actions != null) {
+	        for (int i = 0; i < actions.getSize(); i++) {
+				ActionModel action = actions.getElementAt(i);
+				sum += action.getCount();
+			}
+        }
+        count.setText(String.valueOf(sum));
 	}
 
 	private void buildDateField() {
