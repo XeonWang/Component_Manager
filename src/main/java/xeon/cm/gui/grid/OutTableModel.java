@@ -64,7 +64,7 @@ public class OutTableModel extends CMTableModel {
             case 3:
                 return out.getEid();
             case 4:
-                return out.getPerson().getName();
+                return out.getPerson() != null ? out.getPerson().getName() : "";
             case 5:
                 return out.getMark();
         }

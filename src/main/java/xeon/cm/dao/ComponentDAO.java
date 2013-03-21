@@ -77,7 +77,7 @@ public class ComponentDAO {
     public void save(Component component) {
         Session session = HibernateUtil.sessionFactory.getCurrentSession();
         session.beginTransaction();
-        session.save(component);
+        session.saveOrUpdate(component);
         session.getTransaction().commit();
     }
     
@@ -86,7 +86,7 @@ public class ComponentDAO {
     	Session session = HibernateUtil.sessionFactory.getCurrentSession();
     	session.beginTransaction();
     	Query query = session.createSQLQuery("select cin.actionId, " +
-    			"sum(cin.change_count) - " +
+    			"sum(cin.change_count)/count(cin.change_count) - " +
     			"case when sum(action.count) is null " +
     			"then 0 else sum(action.count) end amount " +
     			"from Component_in as cin left join Component_out as cout " +

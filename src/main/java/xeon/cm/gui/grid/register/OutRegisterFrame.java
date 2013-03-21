@@ -17,6 +17,7 @@ import java.util.List;
 import java.util.Map;
 
 import javax.swing.JButton;
+import javax.swing.JCheckBox;
 import javax.swing.JComboBox;
 import javax.swing.JDialog;
 import javax.swing.JFormattedTextField;
@@ -25,6 +26,8 @@ import javax.swing.JLabel;
 import javax.swing.JList;
 import javax.swing.JTextField;
 import javax.swing.ListModel;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
 
 import xeon.cm.dao.ComponentDAO;
 import xeon.cm.dao.ComponentOutDAO;
@@ -56,6 +59,7 @@ public class OutRegisterFrame extends JFrame implements Register {
     private JTextField eId;
     private JList<ActionModel> actionIds;
     private JTextField remark;
+    private JCheckBox validate;
 
     private ComponentOutDAO componentOutDAO;
     private ComponentDAO componentDAO;
@@ -76,8 +80,9 @@ public class OutRegisterFrame extends JFrame implements Register {
         buildPersonField();
         buildEidField();
         buildRemarkField();
+        buildValidateField();
         
-        setSize(400, 300);
+        setSize(500, 300);
         build();
         setLocationRelativeTo(null);
     }
@@ -143,8 +148,18 @@ public class OutRegisterFrame extends JFrame implements Register {
         constraints.gridy = 6;
         constraints.gridwidth = 2;
         add(remark, constraints);
-
-        add(new RegisterButton(this));
+        
+        constraints.gridwidth = 1;
+        constraints.gridx = 2;
+        constraints.gridy = 0;
+        add(new JLabel("Validate: "), constraints);
+        constraints.gridx = 3;
+        constraints.gridy = 0;
+        add(validate, constraints);
+        
+        constraints.gridx = 2;
+        constraints.gridy = 1;
+        add(new RegisterButton(this), constraints);
     }
 
 	private void buildRemarkField() {
@@ -241,18 +256,44 @@ public class OutRegisterFrame extends JFrame implements Register {
 			}
 		});
 	}
+	
+	private void buildValidateField() {
+		validate = new JCheckBox();
+		validate.addChangeListener(new ChangeListener() {
+			
+			@Override
+			public void stateChanged(ChangeEvent e) {
+				if(validate.isSelected()) {
+					OutRegisterFrame.this.persons.setEnabled(false);
+					OutRegisterFrame.this.eId.setEnabled(false);
+				} else {
+					OutRegisterFrame.this.persons.setEnabled(true);
+					OutRegisterFrame.this.eId.setEnabled(true);
+				}
+			}
+		});
+	}
 
     @Override
     public void register() {
         ComponentOut out = new ComponentOut();
 
-        out.setComponent(componentDAO.getById(comps.getSelectedItem().toString()));
+        Component component = componentDAO.getById(comps.getSelectedItem().toString());
+        int countValue = Integer.parseInt(count.getText());
+        component.setAmount(component.getAmount() - countValue);
+        componentDAO.save(component);
+        
+		out.setComponent(component);
         @SuppressWarnings("deprecation")
 		Date dateValue = new Date(date.getValue().toString());
 		out.setDate(dateValue);
-        out.setCount(Integer.parseInt(count.getText()));
-        out.setPerson(personDAO.getByName((String) persons.getSelectedItem()));
-        out.setEid(eId.getText());
+		out.setCount(countValue);
+        if(!validate.isSelected()) {
+	        out.setPerson(personDAO.getByName((String) persons.getSelectedItem()));
+	        out.setEid(eId.getText());
+        } else {
+        	out.setEid("VALIDATE");
+        }
         ListModel<ActionModel> actions = actionIds.getModel();
         Map<String, Integer> actionMap = new HashMap<>();
         for (int i = 0; i < actions.getSize(); i++) {
