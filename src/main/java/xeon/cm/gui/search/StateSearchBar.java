@@ -1,18 +1,17 @@
 package xeon.cm.gui.search;
 
+import xeon.cm.gui.MainFrame;
+import xeon.cm.gui.factory.Factory;
+import xeon.cm.util.StringUtil;
+
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.FlowLayout;
 import java.util.HashMap;
 import java.util.Map;
-
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JTextField;
-
-import xeon.cm.gui.MainFrame;
-import xeon.cm.gui.factory.Factory;
-import xeon.cm.util.StringUtil;
 
 /**
  * User: xeon
@@ -68,7 +67,13 @@ public class StateSearchBar extends SearchBar {
     	critieras.add(amountEndField);
     	
     	add(critieras, BorderLayout.LINE_START);
-        add(new SearchButton(this, factory.createTable()), BorderLayout.LINE_END);
+
+        JPanel buttonGroup = new JPanel();
+        buttonGroup.setBackground(Color.GRAY);
+        buttonGroup.add(new SearchButton(this, factory.createTable()));
+        buttonGroup.add(new xeon.cm.gui.search.RegisterButton(factory));
+
+        add(buttonGroup, BorderLayout.LINE_END);
     }
     
     @Override

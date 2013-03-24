@@ -1,18 +1,17 @@
 package xeon.cm.gui.factory;
 
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-
 import xeon.cm.gui.grid.CMTable;
 import xeon.cm.gui.grid.CMTableModel;
 import xeon.cm.gui.grid.StateTable;
 import xeon.cm.gui.grid.StateTableModel;
+import xeon.cm.gui.grid.register.ComponentRegisterFrame;
 import xeon.cm.gui.menu.CMMenu;
 import xeon.cm.gui.menu.ComponentStateMenu;
 import xeon.cm.gui.search.SearchBar;
 import xeon.cm.gui.search.StateSearchBar;
 
-import com.sun.xml.internal.ws.addressing.model.ActionNotSupportedException;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
 
 public class StateFactory implements Factory {
 	
@@ -46,6 +45,6 @@ public class StateFactory implements Factory {
 
     @Override
     public JFrame createRegisterFrame() {
-        throw new ActionNotSupportedException("This factory can not create Regist Frame");
+        return ComponentRegisterFrame.getInstance(this);
     }
 }

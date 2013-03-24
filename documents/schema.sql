@@ -14,7 +14,8 @@ create table Company (
 drop table if exists Component_type;
 create table Component_type (
     id int(10) primary key auto_increment,
-    name varchar(50) not null
+    name varchar(50) not null,
+    unique key (name)
 );
 
 drop table if exists Type_field;
