@@ -8,7 +8,7 @@
     <file path="/hibernate.cfg.xml" changelist="b1fd73c3-1c44-46a1-8c61-46a457d814bd" time="1363275565303" ignored="false" />
     <file path="/Test.java" changelist="b1fd73c3-1c44-46a1-8c61-46a457d814bd" time="1361975533350" ignored="false" />
     <file path="/User.java" changelist="b1fd73c3-1c44-46a1-8c61-46a457d814bd" time="1361975440177" ignored="false" />
-    <file path="/fragment.java" changelist="b1fd73c3-1c44-46a1-8c61-46a457d814bd" time="1364119139040" ignored="false" />
+    <file path="/fragment.java" changelist="b1fd73c3-1c44-46a1-8c61-46a457d814bd" time="1364127208624" ignored="false" />
     <file path="/Dummy.txt" changelist="b1fd73c3-1c44-46a1-8c61-46a457d814bd" time="1361888903258" ignored="false" />
     <file path="/Address.java" changelist="b1fd73c3-1c44-46a1-8c61-46a457d814bd" time="1361975466655" ignored="false" />
     <file path="/ComponentType.java" changelist="b1fd73c3-1c44-46a1-8c61-46a457d814bd" time="1362322985707" ignored="false" />
@@ -27,7 +27,7 @@
     <file path="/ComponentTypeTest.java" changelist="b1fd73c3-1c44-46a1-8c61-46a457d814bd" time="1362301427587" ignored="false" />
     <file path="/ComponentChange.java" changelist="b1fd73c3-1c44-46a1-8c61-46a457d814bd" time="1363274534284" ignored="false" />
     <file path="/MainFrame.java" changelist="b1fd73c3-1c44-46a1-8c61-46a457d814bd" time="1363399342494" ignored="false" />
-    <file path="/CMMenuBar.java" changelist="b1fd73c3-1c44-46a1-8c61-46a457d814bd" time="1363271147701" ignored="false" />
+    <file path="/CMMenuBar.java" changelist="b1fd73c3-1c44-46a1-8c61-46a457d814bd" time="1364122259171" ignored="false" />
     <file path="/ComponentStateButton.java" changelist="b1fd73c3-1c44-46a1-8c61-46a457d814bd" time="1362907164568" ignored="false" />
     <file path="/CMMenu.java" changelist="b1fd73c3-1c44-46a1-8c61-46a457d814bd" time="1363270483780" ignored="false" />
     <file path="/ComponentInMenu.java" changelist="b1fd73c3-1c44-46a1-8c61-46a457d814bd" time="1363272648450" ignored="false" />
@@ -43,7 +43,7 @@
     <file path="/InTable.java" changelist="b1fd73c3-1c44-46a1-8c61-46a457d814bd" time="1363272829718" ignored="false" />
     <file path="/InTableModel.java" changelist="b1fd73c3-1c44-46a1-8c61-46a457d814bd" time="1363273294733" ignored="false" />
     <file path="/ComponentInDAO.java" changelist="b1fd73c3-1c44-46a1-8c61-46a457d814bd" time="1363532191645" ignored="false" />
-    <file path="/schema.sql" changelist="b1fd73c3-1c44-46a1-8c61-46a457d814bd" time="1364120548759" ignored="false" />
+    <file path="/schema.sql" changelist="b1fd73c3-1c44-46a1-8c61-46a457d814bd" time="1364127341538" ignored="false" />
     <file path="/RegistButton.java" changelist="b1fd73c3-1c44-46a1-8c61-46a457d814bd" time="1363396207325" ignored="false" />
     <file path="/Factory.java" changelist="b1fd73c3-1c44-46a1-8c61-46a457d814bd" time="1363395053934" ignored="false" />
     <file path="/StateFactory.java" changelist="b1fd73c3-1c44-46a1-8c61-46a457d814bd" time="1364120094213" ignored="false" />
@@ -51,15 +51,25 @@
     <file path="/InFactory.java" changelist="b1fd73c3-1c44-46a1-8c61-46a457d814bd" time="1363395743256" ignored="false" />
     <file path="/Register.java" changelist="b1fd73c3-1c44-46a1-8c61-46a457d814bd" time="1363530455147" ignored="false" />
     <file path="/RegisterButton.java" changelist="b1fd73c3-1c44-46a1-8c61-46a457d814bd" time="1363532640733" ignored="false" />
-    <file path="/CompanyDAO.java" changelist="b1fd73c3-1c44-46a1-8c61-46a457d814bd" time="1363531994043" ignored="false" />
+    <file path="/CompanyDAO.java" changelist="b1fd73c3-1c44-46a1-8c61-46a457d814bd" time="1364123467189" ignored="false" />
     <file path="/OutTableModel.java" changelist="b1fd73c3-1c44-46a1-8c61-46a457d814bd" time="1363702272402" ignored="false" />
     <file path="/ComponentOutDAO.java" changelist="b1fd73c3-1c44-46a1-8c61-46a457d814bd" time="1363705911329" ignored="false" />
     <file path="/OutRegisterFrame.java" changelist="b1fd73c3-1c44-46a1-8c61-46a457d814bd" time="1363706287828" ignored="false" />
     <file path="/OutFactory.java" changelist="b1fd73c3-1c44-46a1-8c61-46a457d814bd" time="1363706254886" ignored="false" />
     <file path="/Singleton.java" changelist="b1fd73c3-1c44-46a1-8c61-46a457d814bd" time="1363991894822" ignored="false" />
     <file path="/SingletonGcTest.java" changelist="b1fd73c3-1c44-46a1-8c61-46a457d814bd" time="1364075691365" ignored="false" />
-    <file path="/SystemManageMenu.java" changelist="b1fd73c3-1c44-46a1-8c61-46a457d814bd" time="1364118608921" ignored="false" />
+    <file path="/SystemManageMenu.java" changelist="b1fd73c3-1c44-46a1-8c61-46a457d814bd" time="1364126939532" ignored="false" />
     <file path="/ComponentRegisterFrame.java" changelist="b1fd73c3-1c44-46a1-8c61-46a457d814bd" time="1364120001278" ignored="false" />
+    <file path="/ComponentTypeFactory.java" changelist="b1fd73c3-1c44-46a1-8c61-46a457d814bd" time="1364122364340" ignored="false" />
+    <file path="/ComponentTypeSearchBar.java" changelist="b1fd73c3-1c44-46a1-8c61-46a457d814bd" time="1364121692154" ignored="false" />
+    <file path="/ComponentTypeTableModel.java" changelist="b1fd73c3-1c44-46a1-8c61-46a457d814bd" time="1364122833131" ignored="false" />
+    <file path="/ComponentTypeRegisterFrame.java" changelist="b1fd73c3-1c44-46a1-8c61-46a457d814bd" time="1364122162115" ignored="false" />
+    <file path="/CompanyFactory.java" changelist="b1fd73c3-1c44-46a1-8c61-46a457d814bd" time="1364123044506" ignored="false" />
+    <file path="/CompanyTableModel.java" changelist="b1fd73c3-1c44-46a1-8c61-46a457d814bd" time="1364123319451" ignored="false" />
+    <file path="/CompanyRegisterFrame.java" changelist="b1fd73c3-1c44-46a1-8c61-46a457d814bd" time="1364123404984" ignored="false" />
+    <file path="/PersonFactory.java" changelist="b1fd73c3-1c44-46a1-8c61-46a457d814bd" time="1364127015587" ignored="false" />
+    <file path="/PersonTableModel.java" changelist="b1fd73c3-1c44-46a1-8c61-46a457d814bd" time="1364127188850" ignored="false" />
+    <file path="/PersonRegisterFrame.java" changelist="b1fd73c3-1c44-46a1-8c61-46a457d814bd" time="1364127254298" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,57 +129,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="SystemManageMenu.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/xeon/cm/gui/menu/SystemManageMenu.java">
+      <file leaf-file-name="PersonFactory.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/xeon/cm/gui/factory/PersonFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="43" selection-start="101" selection-end="101" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ComponentOutMenu.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/xeon/cm/gui/menu/ComponentOutMenu.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="41" selection-start="189" selection-end="189" vertical-scroll-proportion="0.0">
+            <state line="46" column="55" selection-start="1121" selection-end="1121" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CMMenu.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/xeon/cm/gui/menu/CMMenu.java">
+      <file leaf-file-name="schema.sql" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/documents/schema.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="31" selection-start="1357" selection-end="1357" vertical-scroll-proportion="0.0">
+            <state line="4" column="21" selection-start="146" selection-end="146" vertical-scroll-proportion="0.14742015">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StateSearchBar.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/xeon/cm/gui/search/StateSearchBar.java">
+      <file leaf-file-name="PersonRegisterFrame.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/xeon/cm/gui/grid/register/PersonRegisterFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="75" column="57" selection-start="2123" selection-end="2123" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StateFactory.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/xeon/cm/gui/factory/StateFactory.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="56" selection-start="1170" selection-end="1170" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ComponentRegisterFrame.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/xeon/cm/gui/grid/register/ComponentRegisterFrame.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="82" selection-start="1392" selection-end="1392" vertical-scroll-proportion="0.66062176">
+            <state line="73" column="38" selection-start="1854" selection-end="1854" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -185,21 +166,21 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/xeon/cm/gui/grid/CMTable.java" />
-        <option value="$PROJECT_DIR$/src/main/java/xeon/cm/model/ComponentOut.java" />
-        <option value="$PROJECT_DIR$/src/main/java/xeon/cm/gui/grid/OutTableModel.java" />
-        <option value="$PROJECT_DIR$/src/main/java/xeon/cm/dao/PersonDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/xeon/cm/dao/ComponentOutDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/xeon/cm/gui/factory/OutFactory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/xeon/cm/gui/grid/register/OutRegisterFrame.java" />
-        <option value="$PROJECT_DIR$/src/test/java/xeon/cm/dao/Singleton.java" />
-        <option value="$PROJECT_DIR$/src/test/java/xeon/cm/dao/SingletonGcTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/xeon/cm/gui/menu/ComponentStateMenu.java" />
+        <option value="$PROJECT_DIR$/src/main/java/xeon/cm/gui/CMMenuBar.java" />
+        <option value="$PROJECT_DIR$/src/main/java/xeon/cm/gui/factory/ComponentTypeFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/xeon/cm/gui/grid/ComponentTypeTableModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/xeon/cm/gui/search/CompanySearchBar.java" />
+        <option value="$PROJECT_DIR$/src/main/java/xeon/cm/gui/grid/CompanyTable.java" />
+        <option value="$PROJECT_DIR$/src/main/java/xeon/cm/gui/grid/CompanyTableModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/xeon/cm/gui/grid/register/CompanyRegisterFrame.java" />
+        <option value="$PROJECT_DIR$/src/main/java/xeon/cm/dao/CompanyDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/xeon/cm/gui/factory/CompanyFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/xeon/cm/gui/menu/SystemManageMenu.java" />
-        <option value="$PROJECT_DIR$/src/main/java/xeon/cm/gui/search/StateSearchBar.java" />
-        <option value="$PROJECT_DIR$/src/main/java/xeon/cm/dao/ComponentTypeDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/xeon/cm/gui/grid/register/ComponentRegisterFrame.java" />
-        <option value="$PROJECT_DIR$/src/main/java/xeon/cm/gui/factory/StateFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/xeon/cm/gui/search/PersonSearchBar.java" />
+        <option value="$PROJECT_DIR$/src/main/java/xeon/cm/gui/grid/PersonTable.java" />
+        <option value="$PROJECT_DIR$/src/main/java/xeon/cm/gui/grid/register/PersonTableModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/xeon/cm/gui/grid/register/PersonRegisterFrame.java" />
+        <option value="$PROJECT_DIR$/src/main/java/xeon/cm/gui/factory/PersonFactory.java" />
         <option value="$PROJECT_DIR$/documents/schema.sql" />
       </list>
     </option>
@@ -285,62 +266,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Hibernate_study" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Hibernate_study" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Hibernate_study" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Hibernate_study" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Hibernate_study" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Hibernate_study" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Hibernate_study" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Hibernate_study" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="documents" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -368,6 +293,9 @@
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="xeon.cm.gui.grid.register" />
+      <recent name="xeon.cm.gui.grid" />
+      <recent name="xeon.cm.gui.search" />
+      <recent name="xeon.cm.gui.factory" />
       <recent name="xeon.cm.gui.menu" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
@@ -671,23 +599,23 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-4" width="1303" height="773" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.55856574" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3072" sideWeight="0.47888446" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3072" sideWeight="0.48525897" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328" sideWeight="0.4007968" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328" sideWeight="0.39601594" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32988048" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21673307" sideWeight="0.6928" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3072" sideWeight="0.51553786" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21673307" sideWeight="0.6928" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3072" sideWeight="0.5091633" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -755,116 +683,118 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/xeon/cm/gui/grid/register/OutRegisterFrame.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/xeon/cm/gui/search/ComponentTypeSearchBar.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="42" selection-start="1643" selection-end="1643" vertical-scroll-proportion="0.038961038">
+        <state line="62" column="81" selection-start="1589" selection-end="1589" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar:///usr/jdk7/src.zip!/java/lang/ClassLoader.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/xeon/cm/gui/grid/ComponentTypeTableModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1528" column="23" selection-start="57709" selection-end="57709" vertical-scroll-proportion="0.33251232">
+        <state line="69" column="57" selection-start="1623" selection-end="1623" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar:///usr/jdk7/src.zip!/java/lang/Class.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/xeon/cm/gui/search/CompanySearchBar.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="185" column="63" selection-start="6224" selection-end="6224" vertical-scroll-proportion="0.40640393">
+        <state line="20" column="13" selection-start="412" selection-end="412" vertical-scroll-proportion="-1.3005182">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/xeon/cm/gui/menu/ComponentStateMenu.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/xeon/cm/gui/grid/CompanyTable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="13" selection-start="227" selection-end="227" vertical-scroll-proportion="0.33169532">
+        <state line="12" column="13" selection-start="172" selection-end="172" vertical-scroll-proportion="0.3316062">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/xeon/cm/model/Company.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="20" selection-start="205" selection-end="212" vertical-scroll-proportion="0.3316062">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/xeon/cm/gui/grid/CompanyTableModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="61" column="42" selection-start="1384" selection-end="1384" vertical-scroll-proportion="0.53367877">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/xeon/cm/dao/CompanyDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="49" selection-start="496" selection-end="496" vertical-scroll-proportion="0.58290154">
+          <folding>
+            <element signature="e#655#685#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/xeon/cm/gui/grid/register/CompanyRegisterFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="17" selection-start="668" selection-end="668" vertical-scroll-proportion="-1.0638821">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/xeon/cm/gui/factory/CompanyFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="56" selection-start="1125" selection-end="1125" vertical-scroll-proportion="0.6683047">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/xeon/cm/gui/menu/SystemManageMenu.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="43" selection-start="101" selection-end="101" vertical-scroll-proportion="0.0">
+        <state line="57" column="42" selection-start="1605" selection-end="1605" vertical-scroll-proportion="0.7788698">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/xeon/cm/gui/menu/ComponentOutMenu.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/xeon/cm/gui/search/PersonSearchBar.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="41" selection-start="189" selection-end="189" vertical-scroll-proportion="0.0">
+        <state line="20" column="13" selection-start="412" selection-end="412" vertical-scroll-proportion="0.33169532">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/xeon/cm/gui/menu/CMMenu.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/xeon/cm/gui/grid/PersonTable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="31" selection-start="1357" selection-end="1357" vertical-scroll-proportion="0.0">
+        <state line="12" column="13" selection-start="172" selection-end="172" vertical-scroll-proportion="0.33169532">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/xeon/cm/gui/search/RegisterButton.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/xeon/cm/gui/grid/register/PersonTableModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="47" selection-start="675" selection-end="675" vertical-scroll-proportion="0.63144964">
+        <state line="73" column="36" selection-start="1560" selection-end="1560" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/xeon/cm/gui/search/OutSearchBar.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/xeon/cm/gui/grid/register/PersonRegisterFrame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="100" column="43" selection-start="3213" selection-end="3213" vertical-scroll-proportion="0.0">
+        <state line="73" column="38" selection-start="1854" selection-end="1854" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/xeon/cm/gui/search/StateSearchBar.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/xeon/cm/gui/factory/PersonFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="57" selection-start="2123" selection-end="2123" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/xeon/cm/model/Component.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="13" selection-start="237" selection-end="237" vertical-scroll-proportion="0.3316062">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/xeon/cm/gui/factory/OutFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="48" selection-start="1153" selection-end="1153" vertical-scroll-proportion="0.63212436">
+        <state line="46" column="55" selection-start="1121" selection-end="1121" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/documents/schema.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="20" selection-start="443" selection-end="443" vertical-scroll-proportion="0.66062176">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/xeon/cm/gui/factory/StateFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="56" selection-start="1170" selection-end="1170" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/xeon/cm/dao/ComponentTypeDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="22" selection-start="1216" selection-end="1216" vertical-scroll-proportion="0.83378017">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/xeon/cm/gui/grid/register/ComponentRegisterFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="82" selection-start="1392" selection-end="1392" vertical-scroll-proportion="0.66062176">
+        <state line="4" column="21" selection-start="146" selection-end="146" vertical-scroll-proportion="0.14742015">
           <folding />
         </state>
       </provider>

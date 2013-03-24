@@ -1,7 +1,8 @@
 drop table if exists Person;
 create table Person (
     id int(10) primary key auto_increment,
-    name varchar(10) not null
+    name varchar(10) not null,
+    unique key (name)
 );
 
 drop table if exists Company;

@@ -1,12 +1,11 @@
 package xeon.cm.dao;
 
-import java.util.List;
-
 import org.hibernate.Session;
 import org.hibernate.criterion.Restrictions;
-
 import xeon.cm.model.Company;
 import xeon.cm.util.HibernateUtil;
+
+import java.util.List;
 
 /**
  * User: xeon
@@ -14,6 +13,14 @@ import xeon.cm.util.HibernateUtil;
  * Time: 10:39 PM
  */
 public class CompanyDAO {
+
+    public void save(Company company) {
+        Session session = HibernateUtil.sessionFactory.getCurrentSession();
+        session.beginTransaction();
+        session.save(company);
+        session.getTransaction().commit();
+    }
+
 	public List<Company> load() {
         Session session = HibernateUtil.sessionFactory.getCurrentSession();
         session.beginTransaction();
