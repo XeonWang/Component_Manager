@@ -33,14 +33,16 @@ public class MainFrame extends JFrame {
         return content;
     }
 
-    public static void main(String[] args) {
-    	HibernateUtil.init();
-        MainFrame mainFrame = new MainFrame();
+	private static void createAndShowFrame() {
+		MainFrame mainFrame = new MainFrame();
         mainFrame.init();
-
-        JMenuBar menuBar = new CMMenuBar(mainFrame.getContent());
-        mainFrame.setJMenuBar(menuBar);
+        mainFrame.setJMenuBar(new CMMenuBar(mainFrame.getContent()));
         mainFrame.setContentPane(mainFrame.getContent());
         mainFrame.setVisible(true);
+	}
+	
+    public static void main(String[] args) {
+    	HibernateUtil.init();
+        createAndShowFrame();
     }
 }

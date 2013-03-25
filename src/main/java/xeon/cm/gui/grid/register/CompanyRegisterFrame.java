@@ -26,17 +26,12 @@ public class CompanyRegisterFrame extends JFrame implements Register {
 
     private JTextField name;
 
-    private CompanyDAO companyDAO;
+    private CompanyDAO companyDAO = new CompanyDAO();
 
     private CompanyRegisterFrame(Factory factory) {
         super("Company Register");
         this.factory = factory;
-
-        companyDAO = new CompanyDAO();
-
-        setSize(400, 300);
         build();
-        setLocationRelativeTo(null);
     }
 
     public static CompanyRegisterFrame getInstance(Factory factory) {
@@ -45,8 +40,31 @@ public class CompanyRegisterFrame extends JFrame implements Register {
     }
 
     private void build() {
+        setSize(400, 300);
         setLayout(new GridBagLayout());
-        GridBagConstraints constraints = new GridBagConstraints();
+        addComponents();
+        setLocationRelativeTo(null);
+    }
+
+    @Override
+    public void register() {
+        companyDAO.save(buildCompany());
+        reloadTableData();
+        this.setVisible(false);
+    }
+
+	private void reloadTableData() {
+		((CMTableModel) factory.createTable().getModel()).load();
+	}
+
+	private Company buildCompany() {
+		Company company = new Company();
+        company.setName(name.getText());
+		return company;
+	}
+	
+	private void addComponents() {
+		GridBagConstraints constraints = new GridBagConstraints();
         constraints.insets = new Insets(0, 5, 5, 5);
         constraints.gridwidth = 1;
 
@@ -60,19 +78,5 @@ public class CompanyRegisterFrame extends JFrame implements Register {
         add(name, constraints);
 
         add(new RegisterButton(this));
-    }
-
-    @Override
-    public void register() {
-        Company company = new Company();
-
-        company.setName(name.getText());
-
-        companyDAO.save(company);
-        
-        ((CMTableModel) factory.createTable().getModel()).load();
-        this.setVisible(false);
-        this.validate();
-    }
-
+	}
 }

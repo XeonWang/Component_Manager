@@ -57,9 +57,46 @@ public class OutSearchBar extends SearchBar {
     }
 
     private void addChildren() {
-        FlowLayout critieraLayout = new FlowLayout(FlowLayout.LEADING);
-        critieraLayout.setHgap(5);
-        JPanel critieras1 = new JPanel(critieraLayout);
+        
+        add(createCritieraContainer(createCritieras1(), createCritieras2()), 
+        		BorderLayout.LINE_START);
+
+        add(createButtons(), BorderLayout.LINE_END);
+    }
+
+	private JPanel createButtons() {
+		JPanel buttons = new JPanel();
+        buttons.setBackground(Color.GRAY);
+        LayoutManager buttonsLayout = new GridLayout(2, 1, 0, 5);
+        buttons.setLayout(buttonsLayout);
+        buttons.add(new SearchButton(this, factory.createTable()));
+        buttons.add(new RegisterButton(factory));
+		return buttons;
+	}
+
+	private JPanel createCritieraContainer(JPanel critieras1, JPanel critieras2) {
+		JPanel critierasContainer = new JPanel();
+        critierasContainer.setLayout(new BoxLayout(critierasContainer, BoxLayout.Y_AXIS));
+        critierasContainer.add(critieras1);
+        critierasContainer.add(critieras2);
+		return critierasContainer;
+	}
+
+	private JPanel createCritieras2() {
+		JPanel critieras2 = new JPanel(getALayout());
+        critieras2.setSize(700, critieras2.getHeight());
+        critieras2.setBackground(Color.GRAY);
+
+        critieras2.add(new JLabel("EID: "));
+        critieras2.add(eId);
+
+        critieras2.add(new JLabel("Person: "));
+        critieras2.add(person);
+		return critieras2;
+	}
+
+	private JPanel createCritieras1() {
+		JPanel critieras1 = new JPanel(getALayout());
         critieras1.setSize(700, critieras1.getHeight());
         critieras1.setBackground(Color.GRAY);
 
@@ -75,33 +112,14 @@ public class OutSearchBar extends SearchBar {
         critieras1.add(countBegin);
         critieras1.add(new JLabel("-"));
         critieras1.add(countEnd);
-        
-        JPanel critieras2 = new JPanel(critieraLayout);
-        critieras2.setSize(700, critieras1.getHeight());
-        critieras2.setBackground(Color.GRAY);
+		return critieras1;
+	}
 
-        critieras2.add(new JLabel("EID: "));
-        critieras2.add(eId);
-
-        critieras2.add(new JLabel("Person: "));
-        critieras2.add(person);
-        
-        JPanel critierasContainer = new JPanel();
-        critierasContainer.setLayout(new BoxLayout(critierasContainer, BoxLayout.Y_AXIS));
-        critierasContainer.add(critieras1);
-        critierasContainer.add(critieras2);
-
-        add(critierasContainer, BorderLayout.LINE_START);
-
-        JPanel buttons = new JPanel();
-        buttons.setBackground(Color.GRAY);
-        LayoutManager buttonsLayout = new GridLayout(2, 1, 0, 5);
-        buttons.setLayout(buttonsLayout);
-        buttons.add(new SearchButton(this, factory.createTable()));
-        buttons.add(new RegisterButton(factory));
-
-        add(buttons, BorderLayout.LINE_END);
-    }
+	private FlowLayout getALayout() {
+		FlowLayout critieraLayout = new FlowLayout(FlowLayout.LEADING);
+        critieraLayout.setHgap(5);
+		return critieraLayout;
+	}
 
     @Override
     public Map<String, String> getSearchCritieras() {

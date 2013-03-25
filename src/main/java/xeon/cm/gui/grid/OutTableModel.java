@@ -37,8 +37,9 @@ public class OutTableModel extends CMTableModel {
                 return "Person";
             case 5:
                 return "Remark";
+            default:
+            	return "";
         }
-        return "";
     }
 
     @Override
