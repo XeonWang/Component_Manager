@@ -3,7 +3,6 @@ package xeon.cm.gui;
 import xeon.cm.util.HibernateUtil;
 
 import javax.swing.JFrame;
-import javax.swing.JMenuBar;
 import javax.swing.JPanel;
 import javax.swing.WindowConstants;
 import java.awt.BorderLayout;

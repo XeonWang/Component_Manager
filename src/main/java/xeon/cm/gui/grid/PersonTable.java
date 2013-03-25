@@ -12,7 +12,8 @@ import javax.swing.table.TableModel;
  */
 public class PersonTable extends CMTable {
 
-
+	private static final long serialVersionUID = 2288570676298697810L;
+	
 	private static PersonTable instance;
 
 	private PersonTable(Factory factory, TableModel model){

@@ -14,8 +14,8 @@ import java.util.Map;
  * Time: 10:17 PM
  */
 public class PersonTableModel extends CMTableModel {
-
-
+	private static final long serialVersionUID = 799006266478271215L;
+	
 	private PersonDAO personDAO;
     private List<Person> persons;
 

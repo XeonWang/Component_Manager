@@ -11,8 +11,8 @@ import javax.swing.table.TableModel;
  * Time: 9:40 PM
  */
 public class ComponentTypeTable extends CMTable {
-
-
+	private static final long serialVersionUID = -286325164758981179L;
+	
 	private static ComponentTypeTable instance;
 
 	private ComponentTypeTable(Factory factory, TableModel model){

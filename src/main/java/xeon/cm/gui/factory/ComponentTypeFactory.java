@@ -22,6 +22,7 @@ public class ComponentTypeFactory implements Factory {
 		return instance;
 	}
 
+	@SuppressWarnings("serial")
 	@Override
 	public CMMenu createMenu(JPanel content) {
 		return new CMMenu(this, content) {};

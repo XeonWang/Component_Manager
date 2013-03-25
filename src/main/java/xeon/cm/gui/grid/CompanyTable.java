@@ -11,8 +11,8 @@ import javax.swing.table.TableModel;
  * Time: 9:40 PM
  */
 public class CompanyTable extends CMTable {
-
-
+	private static final long serialVersionUID = 4879669673773576944L;
+	
 	private static CompanyTable instance;
 
 	private CompanyTable(Factory factory, TableModel model){

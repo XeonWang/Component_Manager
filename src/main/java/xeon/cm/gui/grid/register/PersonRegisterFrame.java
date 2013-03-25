@@ -19,7 +19,8 @@ import java.awt.Insets;
  */
 public class PersonRegisterFrame extends JFrame implements Register {
 
-
+	private static final long serialVersionUID = -3025358556210462086L;
+	
 	private static PersonRegisterFrame instance;
 	private Factory factory;
 

@@ -23,7 +23,8 @@ public class ComponentTypeDAO {
     public List<ComponentType> load() {
         Session session = HibernateUtil.sessionFactory.getCurrentSession();
         session.beginTransaction();
-        List<ComponentType> results = session.createCriteria(ComponentType.class).list();
+        @SuppressWarnings("unchecked")
+		List<ComponentType> results = session.createCriteria(ComponentType.class).list();
         session.getTransaction().commit();
         return results;
     }
