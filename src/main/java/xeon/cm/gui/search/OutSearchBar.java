@@ -9,9 +9,7 @@ import javax.swing.JFormattedTextField;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
-import java.awt.BorderLayout;
 import java.awt.Color;
-import java.awt.FlowLayout;
 import java.awt.GridLayout;
 import java.awt.LayoutManager;
 import java.text.SimpleDateFormat;
@@ -28,59 +26,25 @@ public class OutSearchBar extends SearchBar {
 	private static final long serialVersionUID = 2550846914402232333L;
 	
 	private int width = MainFrame.width;
-    private int height = 40;
+    private int height = 60;
 
     private static OutSearchBar instance;
 
-    private JTextField componentId = new JTextField(10);
-    private JFormattedTextField date = new JFormattedTextField(new SimpleDateFormat(StringUtil.DATA_FORMAT));
-    private JTextField countBegin = new JTextField(5);
-    private JTextField countEnd = new JTextField(5);
-    private JTextField eId = new JTextField(10);
-    private JTextField person = new JTextField(5);
+    private JTextField componentId;
+    private JFormattedTextField date;
+    private JTextField countBegin;
+    private JTextField countEnd;
+    private JTextField eId;
+    private JTextField person;
 
     private OutSearchBar(Factory factory){
     	super(factory);
-        init();
-        addChildren();
     }
 
     public static OutSearchBar getInstance(Factory factory) {
         if (instance == null) instance = new OutSearchBar(factory);
         return instance;
     }
-
-    private void init() {
-        setLayout(new BorderLayout());
-        setSize(width, height);
-        setBackground(Color.GRAY);
-    }
-
-    private void addChildren() {
-        
-        add(createCritieraContainer(createCritieras1(), createCritieras2()), 
-        		BorderLayout.LINE_START);
-
-        add(createButtons(), BorderLayout.LINE_END);
-    }
-
-	private JPanel createButtons() {
-		JPanel buttons = new JPanel();
-        buttons.setBackground(Color.GRAY);
-        LayoutManager buttonsLayout = new GridLayout(2, 1, 0, 5);
-        buttons.setLayout(buttonsLayout);
-        buttons.add(new SearchButton(this, factory.createTable()));
-        buttons.add(new RegisterButton(factory));
-		return buttons;
-	}
-
-	private JPanel createCritieraContainer(JPanel critieras1, JPanel critieras2) {
-		JPanel critierasContainer = new JPanel();
-        critierasContainer.setLayout(new BoxLayout(critierasContainer, BoxLayout.Y_AXIS));
-        critierasContainer.add(critieras1);
-        critierasContainer.add(critieras2);
-		return critierasContainer;
-	}
 
 	private JPanel createCritieras2() {
 		JPanel critieras2 = new JPanel(getALayout());
@@ -115,12 +79,6 @@ public class OutSearchBar extends SearchBar {
 		return critieras1;
 	}
 
-	private FlowLayout getALayout() {
-		FlowLayout critieraLayout = new FlowLayout(FlowLayout.LEADING);
-        critieraLayout.setHgap(5);
-		return critieraLayout;
-	}
-
     @Override
     public Map<String, String> getSearchCritieras() {
         Map<String, String> critieras = new HashMap<>();
@@ -144,4 +102,44 @@ public class OutSearchBar extends SearchBar {
         }
         return critieras;
     }
+
+    @Override
+	public int getWidth() {
+		return width;
+	}
+
+    @Override
+	public int getHeight() {
+		return height;
+	}
+
+	@Override
+	protected JPanel createCritieras() {
+		JPanel critierasContainer = new JPanel();
+        critierasContainer.setLayout(new BoxLayout(critierasContainer, BoxLayout.Y_AXIS));
+        critierasContainer.add(createCritieras1());
+        critierasContainer.add(createCritieras2());
+		return critierasContainer;
+	}
+
+	@Override
+	protected JPanel createButtonGroup() {
+		JPanel buttons = new JPanel();
+        buttons.setBackground(Color.GRAY);
+        LayoutManager buttonsLayout = new GridLayout(2, 1, 0, 5);
+        buttons.setLayout(buttonsLayout);
+        buttons.add(new SearchButton(this, factory.createTable()));
+        buttons.add(new RegisterButton(factory));
+		return buttons;
+	}
+
+	@Override
+	protected void initChildren() {
+	    componentId = new JTextField(10);
+	    date = new JFormattedTextField(new SimpleDateFormat(StringUtil.DATA_FORMAT));
+	    countBegin = new JTextField(5);
+	    countEnd = new JTextField(5);
+	    eId = new JTextField(10);
+	    person = new JTextField(5);
+	}
 }

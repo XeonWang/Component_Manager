@@ -7,9 +7,7 @@ import xeon.cm.util.StringUtil;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
-import java.awt.BorderLayout;
 import java.awt.Color;
-import java.awt.FlowLayout;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -19,19 +17,17 @@ import java.util.Map;
  * Time: 9:15 PM
  */
 public class PersonSearchBar extends SearchBar {
-
-
+	private static final long serialVersionUID = -4134288446680392494L;
+	
 	private int width = MainFrame.width;
 	private int height = 40;
 
-	private JTextField name = new JTextField(5);
+	private JTextField name;
 
 	private static PersonSearchBar instance;
 
     private PersonSearchBar(Factory factory) {
     	super(factory);
-    	init();
-    	addChildren();
     }
 
     public static PersonSearchBar getInstance(Factory factory) {
@@ -39,31 +35,23 @@ public class PersonSearchBar extends SearchBar {
     	return instance;
     }
 
-    private void init() {
-        setLayout(new BorderLayout());
-        setSize(width, height);
-        setBackground(Color.GRAY);
-    }
-
-    private void addChildren() {
-    	FlowLayout critieraLayout = new FlowLayout();
-    	critieraLayout.setHgap(15);
-		JPanel critieras = new JPanel(critieraLayout);
-    	critieras.setBackground(Color.GRAY);
-
-    	critieras.add(new JLabel("Name: "));
-    	critieras.add(name);
-
-
-    	add(critieras, BorderLayout.LINE_START);
-
-        JPanel buttonGroup = new JPanel();
+    @Override
+	protected JPanel createButtonGroup() {
+		JPanel buttonGroup = new JPanel();
         buttonGroup.setBackground(Color.GRAY);
         buttonGroup.add(new SearchButton(this, factory.createTable()));
         buttonGroup.add(new RegisterButton(factory));
-
-        add(buttonGroup, BorderLayout.LINE_END);
-    }
+		return buttonGroup;
+	}
+	
+	@Override
+	protected JPanel createCritieras() {
+		JPanel critieras = new JPanel(getALayout());
+    	critieras.setBackground(Color.GRAY);
+    	critieras.add(new JLabel("Name: "));
+    	critieras.add(name);
+		return critieras;
+	}
     
     @Override
     public Map<String, String> getSearchCritieras() {
@@ -73,4 +61,19 @@ public class PersonSearchBar extends SearchBar {
     	}
     	return critieras;
     }
+    
+    @Override
+	public int getWidth() {
+		return width;
+	}
+
+    @Override
+	public int getHeight() {
+		return height;
+	}
+
+	@Override
+	protected void initChildren() {
+		name = new JTextField(5);
+	}
 }

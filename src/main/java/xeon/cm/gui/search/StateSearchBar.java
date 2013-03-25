@@ -7,9 +7,7 @@ import xeon.cm.util.StringUtil;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
-import java.awt.BorderLayout;
 import java.awt.Color;
-import java.awt.FlowLayout;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -25,34 +23,34 @@ public class StateSearchBar extends SearchBar {
 	private int width = MainFrame.width;
 	private int height = 40;
 	
-	private JTextField idField = new JTextField(10);
-	private JTextField typeField = new JTextField(10);
-	private JTextField amountBeginField = new JTextField(5);
-	private JTextField amountEndField = new JTextField(5);
+	private JTextField idField;
+	private JTextField typeField;
+	private JTextField amountBeginField;
+	private JTextField amountEndField;
 	
 	private static StateSearchBar instance;
 	
     private StateSearchBar(Factory factory) {
     	super(factory);
-    	init();
-    	addChildren();
     }
     
     public static StateSearchBar getInstance(Factory factory) {
     	if(instance == null) instance = new StateSearchBar(factory);
     	return instance;
     }
-    
-    private void init() {
-        setLayout(new BorderLayout());
-        setSize(width, height);
-        setBackground(Color.GRAY);
-    }
-    
-    private void addChildren() {
-    	FlowLayout critieraLayout = new FlowLayout();
-    	critieraLayout.setHgap(15);
-		JPanel critieras = new JPanel(critieraLayout);
+
+    @Override
+    protected JPanel createButtonGroup() {
+		JPanel buttonGroup = new JPanel();
+        buttonGroup.setBackground(Color.GRAY);
+        buttonGroup.add(new SearchButton(this, factory.createTable()));
+        buttonGroup.add(new xeon.cm.gui.search.RegisterButton(factory));
+		return buttonGroup;
+	}
+
+    @Override
+    protected JPanel createCritieras() {
+		JPanel critieras = new JPanel(getALayout());
     	critieras.setBackground(Color.GRAY);
     	
     	critieras.add(new JLabel("ID: "));
@@ -65,16 +63,8 @@ public class StateSearchBar extends SearchBar {
     	critieras.add(amountBeginField);
     	critieras.add(new JLabel("-"));
     	critieras.add(amountEndField);
-    	
-    	add(critieras, BorderLayout.LINE_START);
-
-        JPanel buttonGroup = new JPanel();
-        buttonGroup.setBackground(Color.GRAY);
-        buttonGroup.add(new SearchButton(this, factory.createTable()));
-        buttonGroup.add(new xeon.cm.gui.search.RegisterButton(factory));
-
-        add(buttonGroup, BorderLayout.LINE_END);
-    }
+		return critieras;
+	}
     
     @Override
     public Map<String, String> getSearchCritieras() {
@@ -93,4 +83,23 @@ public class StateSearchBar extends SearchBar {
     	}
     	return critieras;
     }
+    
+    @Override
+	public int getWidth() {
+		return width;
+	}
+    
+    @Override
+	public int getHeight() {
+		return height;
+	}
+
+	@Override
+	protected void initChildren() {
+		idField = new JTextField(10);
+		typeField = new JTextField(10);
+		amountBeginField = new JTextField(5);
+		amountEndField = new JTextField(5);
+	}
 }
+
